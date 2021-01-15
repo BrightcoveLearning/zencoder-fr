@@ -1,0 +1,1070 @@
+﻿<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Cette rubrique fournit des détails sur la prise en charge par Zencoder des formats vidéo HDR (High Dynamic Range).">
+
+  <title>Formats vidéo HDR pris en charge</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-ultra.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-ultra.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-super.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-super.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-black.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-black.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-bold.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-bold.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-medium.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-medium.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&amp;display=swap">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/prism.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/landing-page.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/tabs.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/styles.css">
+  <link rel="stylesheet" href="/assets/css/local.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
+  <script src="/assets/js/sajari-head.js"></script>
+</head>
+
+<body class="body">
+
+<header>
+  <div class="div-header">
+    <a href="/"><img class="product-logo" src="https://support.brightcove.com/site-assets/images/site/product-logos/Zencoder_Logo.svg" alt="logo du produit" style="max-height: 100px;max-width: 232px;"/></a>
+<!-- GTranslate: https://gtranslate.io/ -->
+<select onchange="doGTranslate(this);"><option value="">Sélectionner la langue</option><option value="en|en" translate="No">English</option><option value="en|zh-TW" translate="No">繁體中文</option><option value="en|fr" translate="No">Français</option><option value="en|de" translate="No">Deutsche</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">Español</option></select>
+
+<script>
+/* <![CDATA[ */
+function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+/* ]]> */
+</script>
+
+    <select id="site_select" class="bcls-select" style="margin-right: 1rem;">
+      <option value="">Autres documents Brightcove</option>
+      
+        
+          <option value="https://support.brightcove.com">Accueil Documentation</option>
+        
+      
+        
+          <option value="https://audience.support.brightcove.com">Audience de Brightcove</option>
+        
+      
+        
+          <option value="https://beacon.support.brightcove.com">Balise Brightcove</option>
+        
+      
+        
+          <option value="https://campaign.support.brightcove.com">Campagne Brightcove</option>
+        
+      
+        
+          <option value="https://engage.support.brightcove.com">Brightcove Engagez</option>
+        
+      
+        
+          <option value="https://live.support.brightcove.com">Brightcove Live</option>
+        
+      
+        
+          <option value="https://gallery.support.brightcove.com">Brightcove Gallery</option>
+        
+      
+        
+          <option value="https://ssai.support.brightcove.com">Brightcove SSAI</option>
+        
+      
+        
+          <option value="https://social.support.brightcove.com">Brightcove Social</option>
+        
+      
+        
+          <option value="https://studio.support.brightcove.com">Video Cloud Studio</option>
+        
+      
+        
+          <option value="https://player.support.brightcove.com">Développement du joueur Brightcove</option>
+        
+      
+        
+          <option value="https://apis.support.brightcove.com">API de la plate-forme Video Cloud</option>
+        
+      
+        
+          <option value="https://sdks.support.brightcove.com">SDK pour périphériques Video Cloud</option>
+        
+      
+        
+          <option value="https://integrations.support.brightcove.com">Intégrations et connecteurs CMS</option>
+        
+      
+        
+          <option value="https://general.support.brightcove.com">Informations générales sur Video Cloud</option>
+        
+      
+        
+          <option value="https://zencoder.support.brightcove.com">Zencoder</option>
+        
+      
+    </select>
+
+
+    <span class="secondary-nav"><a href="https://supportportal.brightcove.com/s/login/?"><img src="https://support.brightcove.com/site-assets/images/site/support.png" alt="assistance"/> Contactez le support</a> <span style="vertical-align: top;margin-left:1em;margin-right:1em;">|</span> <a href="https://status.brightcove.com/"><img src="https://support.brightcove.com/site-assets/images/site/status.png" alt="état du système"/> État du système</a></span> <br/>
+    
+  </div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb arr-right">
+      
+      <li class="breadcrumb-item"><a href="/">Accueil</a></li>
+      
+      
+      
+      <li class="breadcrumb-item"><a href="/encoding-guides/">Guides d'encodage</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">Formats vidéo HDR pris en charge</li>
+    </ol>
+  </nav>
+</header>
+<div class="container">
+    <div class="row">
+      <div class="col-sm-3 left-side-bar">
+        <nav class="sidenav" id="side_nav">
+          
+            
+            <h5><a href="/index.html">Accueil</a></h5>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/getting-started/index.html">Mise en route <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/getting-started/overview-zencoder.html">Vue d'ensemble</a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/quick-start-zencoder.html">Démarrage rapide</a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/getting-api-key.html">Obtention d'une clé API</a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/output-settings.html">Paramètres de sortie</a></li>
+                  
+                
+                  
+                    <li><a href="/getting-started/creating-multiple-outputs.html">Création de plusieurs sorties</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/general-information/index.html">Informations générales <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/general-information/faq-basics.html">Notions de base</a></li>
+                  
+                
+                  
+                    <li><a href="/general-information/faq-codecs-and-formats.html">Codecs Et Formats</a></li>
+                  
+                
+                  
+                    <li><a href="/general-information/faq-encoding.html">Encodage</a></li>
+                  
+                
+                  
+                    <li><a href="/general-information/faq-file-transfers.html">Transferts de fichiers</a></li>
+                  
+                
+                  
+                    <li><a href="/general-information/faq-zencoder-pricing.html">Tarification Zencoder</a></li>
+                  
+                
+                  
+                    <li><a href="/general-information/faq-rate-limiting.html">Limitation de vitesse</a></li>
+                  
+                
+                  
+                    <li><a href="/general-information/supported-video-and-audio-formats-codecs-and-containers.html">Formats audio et vidéo pris en charge</a></li>
+                  
+                
+                  
+                    <li><a href="/general-information/overview-context-aware-encoding.html">Vue d'ensemble : Encodage conscient du contexte</a></li>
+                  
+                
+                  
+                    <li><a href="/general-information/getting-notifications-when-videos-are-finished.html">Obtenir des notifications lorsque les vidéos sont terminées</a></li>
+                  
+                
+                  
+                    <li><a href="/general-information/how-zencoder-saves-your-files-when-uploads-fail.html">Comment Zencoder enregistre les fichiers lorsque les téléchargements échouent</a></li>
+                  
+                
+                  
+                    <li><a href="/general-information/using-zencoder-s3.html">Utilisation de Zencoder avec S3</a></li>
+                  
+                
+                  
+                    <li><a href="/general-information/using-zencoder-azure.html">Utilisation de Zencoder avec Azure</a></li>
+                  
+                
+                  
+                    <li><a href="/general-information/using-zencoder-google-cloud-platform.html">Utilisation de Zencoder avec Google Cloud Storage</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/references/index.html">Références <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/references/reference.html">Référence de l'API</a></li>
+                  
+                
+                  
+                    <li><a href="/references/known-issues.html">Problèmes connus</a></li>
+                  
+                
+                  
+                    <li><a href="/references/release-notes.html">Mise à jour produit</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/encoding-settings/index.html">Paramètres d'encodage <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/encoding-settings/general/index.html">Paramètres généraux <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/encoding-settings/general/encoding-settings-job.html">Paramètres de la tâche</a></li>
+                        
+                        <li><a href="/encoding-settings/general/encoding-settings-general-output-settings.html">Paramètres généraux de sortie</a></li>
+                        
+                        <li><a href="/encoding-settings/general/cae-settings.html">Paramètres CAE</a></li>
+                        
+                        <li><a href="/encoding-settings/general/encoding-settings-conditional-outputs.html">Paramètres des sorties conditionnelles</a></li>
+                        
+                        <li><a href="/encoding-settings/general/encoding-settings-notifications.html">Paramètres des notifications</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/encoding-settings/general-audio-video/index.html">Paramètres audio/vidéo <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-audio.html">Paramètres audio</a></li>
+                        
+                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-audio-processing.html">Paramètres de traitement audio</a></li>
+                        
+                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-video.html">Paramètres vidéo</a></li>
+                        
+                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-video-processing.html">Paramètres de traitement vidéo</a></li>
+                        
+                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-broadcast.html">Paramètres de diffusion</a></li>
+                        
+                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-frame-rate.html">Paramètres de fréquence d'images</a></li>
+                        
+                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html">Paramètres de contrôle de la vitesse</a></li>
+                        
+                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-resolution.html">Paramètres de résolution</a></li>
+                        
+                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html">Paramètres de streaming segmenté</a></li>
+                        
+                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-transmuxing.html">Paramètres de transmuxage</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/encoding-settings/formats-codecs/index.html">Formats et paramètres de codec <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html">Paramètres de format et de codecs</a></li>
+                        
+                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-aac.html">Paramètres AAC</a></li>
+                        
+                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-flv.html">Paramètres FLV</a></li>
+                        
+                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html">Paramètres HDR</a></li>
+                        
+                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html">Paramètres H.264</a></li>
+                        
+                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-mp4.html">Paramètres MP4</a></li>
+                        
+                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-vp6.html">Paramètres VP6</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/encoding-settings/assets/index.html">Paramètres des ressources multimédias <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/encoding-settings/assets/encoding-settings-captions.html">Paramètres des légendes</a></li>
+                        
+                        <li><a href="/encoding-settings/assets/encoding-settings-clips.html">Paramètres des clips</a></li>
+                        
+                        <li><a href="/encoding-settings/assets/encoding-settings-thumbnails.html">Paramètres des vignettes</a></li>
+                        
+                        <li><a href="/encoding-settings/assets/encoding-settings-watermarks.html">Paramètres des filigranes</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/encoding-settings/content-protection/index.html">Paramètres de protection du contenu <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/encoding-settings/content-protection/encoding-settings-encryption.html">Paramètres de chiffrement</a></li>
+                        
+                        <li><a href="/encoding-settings/content-protection/encoding-settings-decryption.html">Paramètres de déchiffrement</a></li>
+                        
+                        <li><a href="/encoding-settings/content-protection/encoding-settings-drm.html">Paramètres DRM</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/encoding-settings/sources-destinations/index.html">Sources/Paramètres de destination <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/encoding-settings/sources-destinations/encoding-settings-s3-settings.html">Paramètres S3</a></li>
+                        
+                        <li><a href="/encoding-settings/sources-destinations/encoding-settings-aspera.html">Paramètres Aspera</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/encoding-guides/index.html">Guides d'encodage <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/encoding-guides/advanced-audio-mapping-guide.html">Guide de cartographie audio</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/as11-mxf.html">AS-11-MXF Guide</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/avc-intra-guide.html">Guide AVC-Intra</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/cae-guide.html">Guide de la CAE</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/creating-mp4-and-hls-outputs-together.html">Guide de transmuxage</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/dash-streaming-and-playlists.html">DASH Streaming et listes de lecture</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/h264-advanced-guide.html">Guide avancé H.264</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/hdr10-video-output.html">Formats vidéo HDR pris en charge</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/hevch265-guide.html">Guide HEVC/H.265</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/highwinds-smil.html">Guide SMIL Vents</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/html5-encoding.html">Encodage HTML5</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/http-live-segmented-streaming-and-playlists.html">Diffusion HLS et listes de lecture</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/http-live-streaming-using-fragmented-mp4.html">HLS utilisant MP4 fragmenté</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/iosmobile-encoding.html">Guide de codage iOS/Mobile</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/microsoft-smooth-streaming.html">Streaming fluide Microsoft</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/using-quality-based-encoding-modes-streaming-video.html">Modes de codage basé sur la qualité pour le streaming</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/vp6-advanced-guide.html">Guide avancé VP6</a></li>
+                  
+                
+                  
+                    <li><a href="/encoding-guides/vp9-guide.html">Guide VP9</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/error-troubleshooting/index.html">Erreurs/Dépannage <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/error-troubleshooting/problems.html">Problèmes courants</a></li>
+                  
+                
+                  
+                    <li><a href="/error-troubleshooting/region-outages.html">Les pannes de région</a></li>
+                  
+                
+                  
+                    <li><a href="/error-troubleshooting/when-should-i-retry-failed-jobs.html">Quand recommencer les travaux ayant échoué</a></li>
+                  
+                
+                  
+                    <li class="submenu-header">
+                      <a href="/error-troubleshooting/error-codes/index.html">Codes d'erreur <strong>+</strong></a>
+                      <ul class="sidenav-subsubmenu" style="display:none;">
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-akamainetstoragefilesizeerror.html">AkamainetStorageFileSizeError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-checksummismatcherror.html">CheckSummisMatcherror</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-dimensiontoosmallerror.html">DimensionToosMallerror</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-downloadaccessdeniederror.html">TéléchargeAccessDeniedError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-downloadfailureerror.html">TéléchargeFailureError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-downloadtimeouterror.html">TéléchargeTimeOutError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-filenotfounderror.html">FileNotFounderErreur</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-inaccuratedurationerror.html">FichierPermanentLyMovedError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-inaccuratedurationerror.html">Erreur inexactitureDurationErreur</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-incompatiblewithdynamicprofileserror.html">Erreur incompatibleWithDynamicProfilesError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-inputfilenotfound.html">InputFileNotFound</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-invalidaccesskeyiderror.html">InvalidAccessKeyIdError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-invalidaudiosettingserror.html">InvalidAudioSettingsError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-invalidcodeccombinationerror.html">InvalidCodecCombinationError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-invaliddownloadedfiletypeerror.html">InvalidDownloadedFileTYPEError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-invalidencryptionsettingserror.html">InvalidenCryptionSettingSerror</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-invalidfilepatherror.html">InvalidFilePatherror</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-invalidformatcodecerror.html">InvalidFormatCodecError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-invalidframerateerror.html">InvalidFramerateError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-invalidusernameorpassworderror.html">InvalidUsernameOrPasswordError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-invalidvideobitrateerror.html">InvalidVideobiTrateError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-invalidvideosettingserror.html">InvalidVideoSettingsError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-nomediaerror.html">NomediaError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-quicktimereferenceerror.html">QuickTimeReferenceError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-remoteserverproblemerror.html">RemoteServerProbleError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-rtmpauthfailederror.html">RTMPAuthFailedError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-rtmpmaxstreamsxidreached.html">RTMPMaxStreamsXidReigné</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-rtmpstreamnamealreadyinuse.html">RTMPStreamNamealReadyInuse</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-s3bucketnotfounderror.html">S3BucketNotFoundError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-segmentingerror.html">SegmentError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-skippedsourceerror.html">Erreur SkippedSourceErreur</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-thumbnailerror.html">Erreur miniature</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-transcodingerror.html">TranscodingError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-transferinvalidgranteegroupurlerror.html">Transfer። InvalidGranteeGroupurlError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-transferinvalidgranteeiderror.html">Transfer። InvalidGranteeIdError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-truncatedfileerror.html">TruncatedFileError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unabletocreatedynamicprofileserror.html">Erreur UnableTocreateDynamicProfilesError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unexpecteddownloadproblemerror.html">InattenduDownloadProbleError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unexpectedffmpegresult.html">InattenduFFMPegResult</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unexpectedmplayerresult.html">ResultMPlayerResult inattendu</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unexpectedprogenresult.html">Résultat ProgenResult inattendu</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unexpectedresulterror.html">InattenduResultErreur</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unexpecteduploadproblemerror.html">InattenteDuploadprobleErreur</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unexpectedx264result.html">Résultat inattenduX264Result</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unreadablefileerror.html">Erreur UnreadableFileError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unsupportedcodecerror.html">UnsupportedCodecError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unsupportedencodingerror.html">UnsupportedEncodingError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unsupportedencryptionerror.html">UnsupportedenCryptionError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-unsupportedtranscodecombinationerror.html">UnsupportedTranscodeCombinationError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-uploadaccessdeniederror.html">UploadAccessDeniedError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-uploadfailureerror.html">UploadFailureError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-uploadservernotfounderror.html">UploadServerNotFoundError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-uploadtimeouterror.html">UploadTimeOutError</a></li>
+                        
+                        <li><a href="/error-troubleshooting/error-codes/error-workertimeouterror.html">WorkerTimeOutErreur</a></li>
+                        
+                      </ul>
+                    </li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/integration/index.html">Intégration <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/integration/faq-integration-libraries.html">bibliothèques d'intégration</a></li>
+                  
+                
+                  
+                    <li><a href="/integration/100-integration-reliability.html">Fiabilité d'intégration 100 %</a></li>
+                  
+                
+                  
+                    <li><a href="/integration/test-jobs-and-integration-mode.html">Test des travaux et mode d'intégration</a></li>
+                  
+                
+                  
+                    <li><a href="/integration/using-read-only-api-keys.html">Utilisation des clés API en lecture seule</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/support/index.html">Support <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/support/brightcove-answer.html">Réponses Brightcove</a></li>
+                  
+                
+                  
+                    <li><a href="/support/viewing-brightcove-system-status-page.html">Affichage de la page État du système Brightcove</a></li>
+                  
+                
+                  
+                    <li><a href="/support/contact-sales.html">Contacter les ventes</a></li>
+                  
+                
+                  
+                    <li><a href="/support/opening-case-with-brightcove-support.html">Ouverture d'un dossier de support</a></li>
+                  
+                
+              </ul>
+            
+          
+      </nav>
+    </div>
+    <div class="col-lg-7" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;">
+  <!-- bootstrap layout -->
+
+<p id="bc_veggie_burger_wrapper" style="display: none;"><img id="bc_veggie_burger" src="/assets/images/feather/menu.svg" alt="Menu de navigation"/></p>
+
+<!-- search bar -->
+<div id="nav-search-box" style="margin-top: 1rem;"></div>
+<!-- in-page navigation for narrow screens -->
+<details class="centered-inpage-nav" id="centered_inpage_nav">
+  <summary><h6 class="toc">Contenu de la page</h6></summary>
+  <nav id="centered_toc"></nav>
+  <ul id="centered_in_page_toc" class="list-none"></ul>
+</details>
+<!-- open in new tab/window -->
+<a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="ouvrir dans un nouvel onglet" style="margin-top:4em;width: 1.5em;"/></a>
+
+
+
+  
+    
+
+
+<h1>Formats vidéo HDR pris en charge</h1>
+<article class="bcls-article">
+  <summary>Cette rubrique fournit des détails sur la prise en charge par Zencoder des formats vidéo HDR (High Dynamic Range).</summary>
+
+  <section class="bcls-section">
+    <h2 id="Overview">Présentation</h2>
+
+    <p>Le terme vidéo HDR (High Dynamic Range) désigne généralement un <em>famille de formats vidéo</em> , caractérisé par des plages de couleurs et de luminosité plus larges grâce aux valeurs de pixels, des types particuliers de caractéristiques de transfert électo-optique (OETF), des espaces colorimétriques et des métadonnées spécialisées transportées avec les flux vidéo codés. Ces formats sont couramment utilisés dans la production et la livraison de contenu vidéo UltraHD.</p>
+
+    <p>Pour plus d'informations sur la vidéo HDR, consultez <a href="https://www.videomaker.com/how-to/technology/what-is-hdr-video/">Qu'est-ce que la vidéo HDR?</a> et <a href="https://en.wikipedia.org/wiki/High-dynamic-range_video">Vidéo à plage dynamique élevée</a>.</p>
+
+    <p>Les types spécifiques de formats vidéo HDR actuellement pris en charge par Zencoder sont répertoriés dans le tableau ci-dessous.</p>
+    <table class="bcls-table">
+      <caption class="bcls-caption--table">Prise en charge des formats HDR</caption>
+      <thead class="bcls-table__head">
+        <tr>
+          <th>Format HDR</th>
+          <th>Profondeur de pixel</th>
+          <th>Gamme de pixels</th>
+          <th>Couleurs primaires</th>
+          <th>Espace colorimétrique</th>
+          <th>OETF</th>
+          <th>Maîtriser les métadonnées d'affichage</th>
+          <th>Métadonnées du niveau de luminosité du contenu</th>
+          <th>Métadonnées dynamiques</th>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>HLG10 <sup><strong><a href="#note1-1">[1-1]</a></strong></sup></td>
+          <td>10</td>
+          <td>limité</td>
+          <td>BT.2020 <sup><strong><a href="#note1-4">[1-4]</a></strong></sup></td>
+          <td>Y'C '<sub>B</sub>C '<sub>R</sub> <sup><strong><a href="#note1-5">[1-5]</a></strong></sup></td>
+          <td>HLG <sup><strong><a href="#note1-7">[1-7]</a></strong></sup></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>PQ10 <sup><strong><a href="#note1-1">[1-1]</a></strong></sup></td>
+          <td>10</td>
+          <td>limité</td>
+          <td>BT.2020 <sup><strong><a href="#note1-4">[1-4]</a></strong></sup></td>
+          <td>Y'C '<sub>B</sub>C '<sub>R</sub> <sup><strong><a href="#note1-5">[1-5]</a></strong></sup></td>
+          <td>PQ <sup><strong><a href="#note1-8">[1-8]</a></strong></sup></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>HDR10 <sup><strong><a href="#note1-1">[1-1]</a></strong></sup></td>
+          <td>10</td>
+          <td>limité</td>
+          <td>BT.2020 <sup><strong><a href="#note1-4">[1-4]</a></strong></sup></td>
+          <td>Y'C '<sub>B</sub>C '<sub>R</sub> <sup><strong><a href="#note1-5">[1-5]</a></strong></sup></td>
+          <td>PQ <sup><strong><a href="#note1-8">[1-8]</a></strong></sup></td>
+          <td>SMPTE 2086 <sup><strong><a href="#note1-9">[1-9]</a></strong></sup></td>
+          <td>CAE 861.3 <sup><strong><a href="#note1-10">[1-10]</a></strong></sup></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>DolbyVision 8.1 <sup><strong><a href="#note1-2">[1-2]</a></strong></sup></td>
+          <td>10</td>
+          <td>limité</td>
+          <td>BT.2020 <sup><strong><a href="#note1-4">[1-4]</a></strong></sup></td>
+          <td>Y'C '<sub>B</sub>C '<sub>R</sub> <sup><strong><a href="#note1-5">[1-5]</a></strong></sup></td>
+          <td>PQ <sup><strong><a href="#note1-8">[1-8]</a></strong></sup></td>
+          <td>SMPTE 2086 <sup><strong><a href="#note1-9">[1-9]</a></strong></sup></td>
+          <td>CAE 861.3 <sup><strong><a href="#note1-10">[1-10]</a></strong></sup></td>
+          <td>SMPTE 2094-10 <sup><strong><a href="#note1-11">[1-11]</a></strong></sup></td>
+        </tr>
+        <tr>
+          <td>DolbyVision 5 <sup><strong><a href="#note1-3">[1-3]</a></strong></sup></td>
+          <td>10</td>
+          <td>plein</td>
+          <td>BT.2020 <sup><strong><a href="#note1-4">[1-4]</a></strong></sup></td>
+          <td>IC<sub>t</sub>C<sub>p</sub> <sup><strong><a href="#note1-6">[1-6]</a></strong></sup></td>
+          <td>PQ <sup><strong><a href="#note1-8">[1-8]</a></strong></sup></td>
+          <td></td>
+          <td></td>
+          <td>SMPTE 2094-10 <sup><strong><a href="#note1-11">[1-11]</a></strong></sup></td>
+        </tr>
+    </table>
+    <h3>Remarques</h3>
+    <ul>
+      <li id="note1-1"><sup><strong>[1-1]</strong></sup> HLG10, PQ10 et HDR10 font référence aux formats HDR définis par le <a href="https://ultrahdforum.org/guidelines/">Directives du forum UltraHD</a></li>
+      <li id="note1-2"><sup><strong>[1-2]</strong></sup> DolbyVision 8.1 fait référence au profil DolbyVision 8, avec l'ID de compatibilité de signal 1, défini par le <a href="https://www.dolby.com/us/en/technologies/dolby-vision/dolby-vision-profiles-levels.pdf">Profils et niveaux DolbyVision</a> spécification</li>
+      <li id="note1-3"><sup><strong>[1-3]</strong></sup> DolbyVision 5 fait référence au profil DolbyVision 5, défini par le <a href="https://www.dolby.com/us/en/technologies/dolby-vision/dolby-vision-profiles-levels.pdf">Profils et niveaux DolbyVision</a> spécification</li>
+      <li id="note1-4"><sup><strong>[1-4]</strong></sup> BT.2020 fait référence au système de colorimétrie défini par <a href="https://www.itu.int/rec/R-REC-BT.2020/en">UIT-R Rec. BT.2020</a></li>
+      <li id="note1-5"><sup><strong>[1-5]</strong></sup> Y'C '<sub>B</sub>C '<sub>R</sub> se réfère au Y'C '<sub>B</sub>C '<sub>R</sub> espace colorimétrique à luminance non constante défini par <a href="https://www.itu.int/rec/R-REC-BT.2020/en">UIT-R Rec. BT.2020</a></li>
+      <li id="note1-6"><sup><strong>[1-6]</strong></sup> IC<sub>t</sub>C<sub>p</sub> fait référence à l'IC<sub>t</sub>C<sub>p</sub> espace colorimétrique défini par <a href="https://www.itu.int/rec/R-REC-BT.2100/en">UIT-R Rec. BT.2100</a></li>
+      <li id="note1-7"><sup><strong>[1-7]</strong></sup> HLG fait référence à la fonction de transfert Hybrid Log Gamma (HLG) définie par <a href="https://www.itu.int/rec/R-REC-BT.2100/en">UIT-R Rec. BT.2100</a></li>
+      <li id="note1-8"><sup><strong>[1-8]</strong></sup> PQ fait référence à la fonction de transfert Perceptual Quantizer (PQ) définie par <a href="https://www.itu.int/rec/R-REC-BT.2100/en">UIT-R Rec. BT.2100</a></li>
+      <li id="note1-9"><sup><strong>[1-9]</strong></sup> SMPTE 2086 fait référence aux caractéristiques d'affichage maître définies par <a href="https://ieeexplore.ieee.org/document/8353899">SMPTE ST 2086</a></li>
+      <li id="note1-10"><sup><strong>[1-10]</strong></sup> CAE 861.3 fait référence aux paramètres de niveau d'éclairage du contenu définis par <a href="https://standards.cta.tech/apps/group_public/project/details.php?project_id=185">CAE 861.3</a></li>
+      <li id="note1-11"><sup><strong>[1-11]</strong></sup> SMPTE 2094-10 fait référence aux métadonnées dynamiques DolbyVision définies par <a href="https://ieeexplore.ieee.org/document/7513370">SMPTE ST 2094-10</a></li>
+    </ul>
+    <p>Des informations sur les spécificités du transport de ces formats dans les flux binaires de codec vidéo, les formats de conteneurs, ainsi que les systèmes de streaming DASH et HLS, peuvent être trouvées dans les documents suivants:
+    <ul>
+      <li><a href="https://www.itu.int/rec/T-REC-H.265">Norme HEVC</a></li>
+      <li><a href="https://ultrahdforum.org/guidelines/">Directives du forum UltraHD</a></li>
+      <li><a href="https://www.dolby.com/us/en/technologies/dolby-vision/dolby-vision-profiles-levels.pdf">Profils et niveaux DolbyVision</a></li>
+      <li><a href="https://developer.apple.com/documentation/http_live_streaming/hls_authoring_specification_for_apple_devices">Directives de création HLS pour les appareils Apple</a></li>
+      <li><a href="https://dashif.org/docs/DASH-IF-IOP-v4.0-clean.pdf">Directives de mise en œuvre: Points d'interopérabilité DASH-IF </a></li>
+      <li>CTA-5001-B:<a href="https://cdn.cta.tech/cta/media/media/resources/standards/pdfs/cta-5001-b-final_v2.pdf"> Écosystème vidéo d'applications Web: Spécification du contenu </a></li>
+    </ul>
+    </p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="supported_operations">Opérations prises en charge</h2>
+    <p>Zencoder ne fonctionne actuellement que <em>opérations de transcodage direct</em> avec des vidéos aux formats HDR. Autrement dit, si la vidéo d'entrée est calibrée en couleurs et codée dans un format HDR particulier, les mêmes métadonnées liées au calibrage des couleurs et au format HDR seront conservées dans la ou les sorties.</p>
+    <p>Les conversions entre différents types de formats HDR ou les conversions entre les formats Standard Dynamic Range (SDR) et HDR ne sont actuellement pas prises en charge. En principe, les conversions entre les formats HDR sont des opérations non triviales qui peuvent avoir un impact sur l'intention artistique et / ou introduire des artefacts visibles. Pour ces raisons, nous recommandons que ces opérations de conversion soient effectuées de manière professionnelle en post-production.</p>
+    <p>L'encodage de vidéos aux formats HDR nécessite actuellement l'utilisation du codec vidéo HEVC, fonctionnant dans le profil Main10 et utilisant des pixels 10 bits. Ces paramètres de codec, de profil et de profondeur de bits doivent être définis pour toutes les sorties HDR. L'utilisation d'autres codecs / profils / profondeurs de bits avec les formats HDR n'est actuellement pas prise en charge.</p>
+    <p>L'encodage de vidéos aux formats DolbyVision nécessite en outre l'utilisation de formats de conteneur ISOBMFF (MP4) pour les sorties. L'utilisation d'autres formats de conteneur avec DolbyVision n'est actuellement pas prise en charge.</p>
+    <p>L'encodage des formats HDR dans Zencoder est pris en charge pour les sorties statiques et dynamiques, générées à l'aide de <a href="https://zencoder.support.brightcove.com/encoding-guides/cae-guide.html">Encodage contextuel Brightcove (CAE)</a> La technologie. L'utilisation de la technologie CAE permet un codage plus efficace et est recommandée par <a href="https://ultrahdforum.org/guidelines/">Directives du forum UltraHD</a> pour l'encodage du contenu UltraHD / HDR. </p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="requirements">Conditions requises pour les fichiers d'entrée</h2>
+
+    <p>Les fichiers vidéo d'entrée doivent être des masters ou des mezzanines de haute qualité contenant un contenu visuel HDR correctement calibré en couleurs et dotés de toutes les métadonnées nécessaires pour décrire le format HDR utilisé.</p>
+    <p>Des exemples de tels fichiers pourraient être:</p>
+    <ul>
+      <li>Flux vidéo compatibles HLG10, PQ10 et HDR10 encodés à l'aide du codec HEVC et transportant toutes les informations HDR nécessaires dans ces flux</li>
+      <li>Mezzanines intra-codées de post-production (par exemple Apple ProRes 4444, Avid DNxHD ou JPEG 2000 (J2K) dans OP1a MXF), accompagnées d'informations supplémentaires sur le type de format HDR utilisé et de toutes les métadonnées supplémentaires (par exemple, affichage principal et niveau de luminosité du contenu) métadonnées) nécessaires pour le décrire</li>
+      <li>Flux DolbyVision codés HEVC, accompagnés de fichiers «RPU» portant les métadonnées dynamiques associées.</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="specifying_hdr_format_parameters">Spécification des paramètres de format HDR</h2>
+
+    <p>Dans les cas où la mezzanine d'entrée contient toutes les métadonnées associées au format HDR, toutes ces informations peuvent être propagées vers les sorties en utilisant le <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#preserve_hdr_metadata"><code translate="No">preserve_hdr_metadata</code></a> paramètre.</p>
+    <p>Cette méthode est illustrée par l'exemple suivant:</p>
+    <pre class="line-numbers"><code class="language-json" translate="No">{ 
+  "input": "s3://mybucket/hdr_master.mp4", 
+  "outputs": [ 
+    { 
+     "video_codec": "hevc", 
+     "video_codec_profile": "main10", 
+     "video_bit_depth": 10,
+     "preserve_hdr_metadata": true
+    } 
+  ] 
+}</code></pre>
+    <p>Cette méthode devrait bien fonctionner avec les mezzanines HDR10, PQ10 et HLG10 codées HEVC.</p>
+    <p>Dans les cas où la mezzanine d'entrée ne décrit pas exactement le format HDR ou ne transporte que des informations partielles, une spécification explicite des paramètres de format HDR doit être utilisée.</p>
+    <p>Dans de tels cas, Zencoder devrait recevoir le <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#hdr_format"><code translate="No">hdr_format</code></a> paramètre, décrivant le type exact de format HDR utilisé, ainsi que plusieurs paramètres supplémentaires qui peuvent être nécessaires pour transmettre les métadonnées associées. Le tableau ci-dessous répertorie les valeurs possibles de <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#hdr_format"><code translate="No">hdr_format</code></a> paramètre et paramètres supplémentaires qui doivent être spécifiés.</p>
+    <table class="bcls-table">
+      <caption class="bcls-caption--table">Détails de hdr_format</caption>
+      <thead class="bcls-table__head">
+        <tr>
+          <th rowspan="2">Format HDR</th>
+          <th colspan="4">Paramètres / valeurs de l'API Zencoder</th>
+        </tr>
+        <tr>
+        <td style="white-space: nowrap;padding: .3rem;"><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#hdr_format"><code translate="No">hdr_format</code></a></td>
+        <td style="white-space: nowrap;padding: .3rem;"><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display"><code translate="No">master_display</code></a></td>
+        <td style="padding: .3rem;"><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#max_content_light_level"><code translate="No">max_content_light_level</code></a> , <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#max_frame_average_light_level"><code translate="No">max_frame_average_light_level</code></a></td>
+        <td style="white-space: nowrap;padding: .3rem;"><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#dolby_vision_rpu_url"><code translate="No">dolby_vision_rpu_url</code></a></td>
+        </tr>
+      </thead>
+      <tbody class="bcls-table__body">
+        <tr>
+          <td>HLG10</td>
+          <td><code translate="No">hlg</code></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>PQ10</td>
+          <td><code translate="No">pq</code></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>HDR10</td>
+          <td><code translate="No">hdr10</code></td>
+          <td>requis</td>
+          <td>requis</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>DolbyVision 8.1</td>
+          <td><code translate="No">dv8.1</code></td>
+          <td>requis</td>
+          <td>requis</td>
+          <td>requis</td>
+        </tr>
+        <tr>
+          <td>DolbyVision 5</td>
+          <td><code translate="No">dv5</code></td>
+          <td></td>
+          <td></td>
+          <td>requis</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Par exemple, l'encodage d'une vidéo HDR10 avec <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#master_display"><code translate="No">master_display</code></a> et <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#max_content_light_level">niveau de luminosité du contenu</a> les paramètres de métadonnées communiqués en externe peuvent être exécutés à l'aide de la commande suivante:</p>
+<pre class="line-numbers"><code class="language-json" translate="No">{
+  "input": "s3://mybucket/prores_hdr_master.mov",
+  "outputs": [
+    {
+      "video_codec": "hevc", 
+      "video_codec_profile": "main10", 
+      "video_bit_depth": 10,
+      "hdr_format": "hdr10",
+      "master_display": {
+        "red": {"x": 0.708, "y": 0.292},
+        "green": {"x": 0.17, "y": 0.797},
+        "blue": {"x": 0.131, "y": 0.046},
+        "white_point": {"x": 0.31273,"y": 0.329},
+        "luminance": {"max": 1000,"min": 0.0001}
+      },
+      "max_content_light_level": 1000,
+      "max_frame_average_light_level": 180
+    }
+  ]
+}
+</code></pre>
+    <p>Cette méthode est appropriée lorsque vous travaillez avec des mezzanines de post-production, en utilisant des codecs tels que Apple ProRes 4444, Avid DNxHD ou JPEG 2000 (J2K) dans OP1a MXF, etc.</p>
+    <p>De même, lors du transcodage du contenu DolbyVision, les métadonnées dynamiques (fichier «RPU») associées au contenu DolbyVision peuvent être communiquées en externe en utilisant <a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html#dolby_vision_rpu_url"><code translate="No">dolby_vision_rpu_url</code></a> paramètre:</p>
+<pre class="line-numbers"><code class="language-json" translate="No">{ 
+  "input": "s3://mybucket/dv5_master.mp4", 
+  "outputs": [ 
+    { 
+     "video_codec": "hevc", 
+     "video_codec_profile": "main10", 
+     "video_bit_depth": 10,
+     "video_color_range": "full",
+     "hdr_format": "dv5",
+     "dolby_vision_rpu_url": "s3://mubucket/dv5_master_rpu.rpu"
+    } 
+  ] 
+}</code></pre>
+  </section>
+  <section class="bcls-section">
+    <h2 id="specifying_hdr_format_parameters_with_cae">Spécification des paramètres de format HDR avec CAE</h2>
+    <p>
+      Lors de l'utilisation <a href="/encoding-guides/cae-guide.html">Encodage contextuel Brightcove (CAE)</a> technologie, tous les paramètres liés au format codec et HDR peuvent être spécifiés comme
+      <ul>
+        <li>paramètres des sorties étiquetés comme <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#dynamic_profile_rendition"><code translate="No">dynamic_profile_rendition</code></a> , ou</li>
+        <li>paramètres de la <a href="/encoding-settings/general/encoding-settings-job.html#dynamic_profile_options"><code translate="No">dynamic_profile_options</code></a> objet</li>
+      </ul>
+    </p>
+    <p>La deuxième méthode est plus compacte et préférée. Un exemple illustrant l'utilisation de la deuxième méthode est fourni ci-dessous:</p>
+<pre class="line-numbers"><code class="language-json" translate="No">{ 
+  "input": "s3://mybucket/hdr_master.mp4", 
+  "generate_dynamic_profile": true,
+  "dynamic_profile_options": 
+  {
+    "max_renditions": 6,
+    "video_codec": "hevc", 
+    "video_codec_profile": "main10", 
+    "video_bit_depth": 10,
+    "preserve_hdr_metadata": true,
+  }
+  "outputs": [ 
+    {"dynamic_profile_rendition": 1}, 
+    {"dynamic_profile_rendition": 2}, 
+    {"dynamic_profile_rendition": 3}, 
+    {"dynamic_profile_rendition": 4}, 
+    {"dynamic_profile_rendition": 5}, 
+    {"dynamic_profile_rendition": 6} 
+  ] 
+}</code></pre>
+  </section>
+</article>
+<!-- complete bootstrap layout -->
+    </div>
+    <div class="col-sm-2 right-side-bar">
+      
+      <nav class="right-side-nav" id="right_side_nav">
+        <h6 class="toc">Contenu de la page</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+<div class="last-updated">
+  Page mise à jour le 28 sept. 2020
+</div>
+
+
+
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
+    <div class="region region-footer-top-center col-md-12">
+      <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
+
+        <h2>Assistance Brightcove</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://status.brightcove.com">État du système</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?">Contacter le support</a>
+          </li>
+          <li>
+            <a href="https://support.brightcove.com/">Documentation</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
+
+        <h2>Formation</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://studio.support.brightcove.com/training/online-training-courses.html">Cours en ligne</a>
+          </li>
+          <li>
+            <a href="https://studio.support.brightcove.com/training/register-training.html">S' inscrire à un cours</a>
+          </li>
+          <li>
+            <a href="https://university.brightcove.com/">Université de Brightcove</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
+
+        <h2>Brightcove</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://www.brightcove.com">BrightCove.com</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?">Contactez-nous</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="row">
+    <div class="region region-footer-bottom-center col-md-12">
+      <div class="bcls-copyright footer-menu">
+        <table>
+          <tr>
+            <td>
+              <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> Brightcove, Inc. Tous droits réservés.</div>
+            </td>
+            <td><a href="https://www.brightcove.com/en/legal/privacy">Confidentialité</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">Termes et conditions</a></td>
+            <td>
+              <div class="gf-links-cols footer-menu">
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</footer>
+<div id="talla_wrapper">
+  <p style="text-align: right;position: relative;"><button style="background:rgb(2, 28, 146);color:Snow;padding:.3rem;position:fixed;right:0;bottom:1em;z-index:9999999" onclick="javascript:displayChat()">Avez-vous des questions ? </button> </p>
+  <div id="talla_chat">
+</div>
+</div>
+<script>
+      
+  var searchBox = sajari.init({
+    mode: "search-box",
+    project: "1588255093746585379", // Set this to your project.
+    collection: "brightcove-documenation", // Set this to your collection.
+    instantPipeline: "autocomplete", // Pipeline used as you type
+    inputPlaceholder: "Search", // Input element placeholder
+    maxSuggestions: 5, // Maximum number of suggestions to show
+    attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
+  });
+  
+    searchBox("sub", "pipeline.search-sent", function (_, query) {
+      window.location = "/search.html?q=" + encodeURIComponent(query.q);
+    });
+  
+
+</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/https-fix.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/setDate.js"></script>
+  
+  <script src="https://support.brightcove.com/site-assets/js/site/prism.js"></script>
+  
+  <script src="https://support.brightcove.com/site-assets/js/site/site.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/tabs.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/toc.js"></script>
+  <script src="/assets/js/sites_nav.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/bcls-utils.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/local-link-fix.js"></script>
+  <script src="/assets/js/feedback.js"></script>
+  
+  <script src="/assets/js/sajari-search-foot.js"></script>
+  
+  <!-- <script src="/assets/js/sajari-index.js"></script> -->
+  <script src="https://assets.talla.com/latest/embeddedjs/talla.js"></script>
+  <script src="/assets/js/talla-init.js"></script>
+  <!-- <script src="https://sdk.amazonaws.com/js/aws-sdk-2.677.0.min.js"></script> -->
+</body>
+
+</html>
