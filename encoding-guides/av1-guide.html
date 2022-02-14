@@ -1,0 +1,69 @@
+---
+title: Description du guide AV1 : Cette page documente l'encodage spécifique AV1 avec Zencoder. Il s'agit d'une version bêta car le codec AV1 lui-même est relativement nouveau et amélioré chaque jour.
+parent: Encoding Guides
+layout: staging
+---
+ <h1>{{ page.title }}</h1>
+<article class="bcls-article">
+  <summary>{{ page.description }}</summary>
+
+  <section class="bcls-section">
+    <h2 id="AV!_Overview">Présentation de AV1</h2>
+    <ul>
+      <li>AV1 est un format d'encodage vidéo de nouvelle génération ouvert et libre de droits de l'Alliance of Open Media Video. Il peut fournir une qualité supérieure à des débits débits nettement inférieurs à ceux des codecs HEVC, VP9 et H.264.</li>
+      <li>
+        La prise en charge du codec AV1 est disponible pour tous les clients Zencoder. <aside class="bcls-aside bcls-aside--information">« Remarque : Si vous êtes un client disposant d'un compte Premium ou d'un contrat et que vous souhaitez essayer AV1, contactez votre responsable de compte pour que ce codec soit activé dans votre compte.</aside>
+      </li>
+      <li>Actuellement, <code translate="No">mp4</code> les <code translate="No">webm</code> conteneurs sont pris en charge avec le codec AV1.</li>
+      <li>À mesure que la popularité et l'utilisation d'AV1 augmentent, de nouvelles fonctionnalités et de nouveaux conteneurs sont ajoutés par l'Alliance of Open Media. Nous ajouterons de nouvelles fonctionnalités à l'avenir au fur et à mesure qu'elles seront disponibles.</li>
+      <li>Consultez la liste des limitations pour plus d'informations.</li>
+    </ul>
+
+  </section>
+  <section class="bcls-section">
+    <h2 id="Specific_Options">Options spécifiques</h2>
+    <ul>
+      <li>
+        <code translate="No">video_codec_level</code>: limite le débit binaire et les unités de l'arbre de codage (CTU).
+        <p>Valeurs valides (voir <a href="https://en.wikipedia.org/wiki/AV1#Levels">cet article</a> pour connaître les valeurs de sortie spécifiques associées à ces valeurs) :</p>
+        <ul>
+          <li>2.0</li>
+          <li>2.1</li>
+          <li>3.0</li>
+          <li>3.1</li>
+          <li>4.0</li>
+          <li>4.1</li>
+          <li>5.0</li>
+          <li>5.1</li>
+          <li>5.2</li>
+          <li>5.3</li>
+          <li>6.0</li>
+          <li>6.1</li>
+          <li>6.2</li>
+          <li>6.3</li>
+        </ul>
+      </li>
+      <li><code translate="No">video_codec_profile</code>: définit le profil de codage. Les profils AV1 actuellement pris en charge sont les suivants : <code translate="No">main</code> <code translate="No">high</code> et <code translate="No">professional</code>. Par défaut : <code translate="No">main</code>.</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="limitation">Contraintes</h2>
+    <p>Les limites actuelles des sorties AV1 sont les suivantes.</p>
+    <ul>
+      <li>Tous les encodages AV1 sont actuellement en un seul passage.</li>
+      <li>Les sorties de fichiers de streaming segmentés / fragmentés ne sont pas encore prises en charge par AV1.</li>
+      <li>
+        Les paramètres suivants ne sont pas pris en charge :
+        <ul>
+          <li><code translate="No">video_bframes</code></li>
+          <li><code translate="No">video_reference_frames</code></li>
+          <li><code translate="No">decoder_bitrate_cap</code>(décoder_buffer_size est pris en charge)</li>
+          <li><code translate="No">max_video_bitrate</code></li>
+          <li><code translate="No">quality</code></li>
+          <li><code translate="No">crf</code></li>
+          <li>Résolutions non multiples de 8 (largeur et hauteur)</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+</article>

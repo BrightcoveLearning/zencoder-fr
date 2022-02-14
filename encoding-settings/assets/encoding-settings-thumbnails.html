@@ -1,660 +1,22 @@
-﻿<!doctype html>
-<html lang="fr">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Cette rubrique contient des détails sur les paramètres d'encodage liés aux miniatures vidéo.">
-
-  <title>Paramètres des vignettes</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link data-react-helmet="true" rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&amp;display=swap">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/prism.css">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/landing-page.css">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/tabs.css">
-  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/styles.css">
-  <link rel="stylesheet" href="/assets/css/local.css">
-  <link data-react-helmet="true" rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&display=swap">
-  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
-  <script src="/assets/js/sajari-head.js"></script>
-</head>
-
-<body class="body">
-
-<header>
-  <div class="div-header">
-    <a href="/"><img class="product-logo" src="https://support.brightcove.com/site-assets/images/site/product-logos/Zencoder_Logo.svg" alt="logo du produit" style="max-height: 100px;max-width: 232px;"/></a>
-<!-- GTranslate: https://gtranslate.io/ -->
-<select onchange="doGTranslate(this);"><option value="">Sélectionner la langue</option><option value="en|en" translate="No">English</option><option value="en|zh-TW" translate="No">繁體中文</option><option value="en|fr" translate="No">Français</option><option value="en|de" translate="No">Deutsche</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">Español</option></select>
-
-<script>
-/* <![CDATA[ */
-function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
-/* ]]> */
-</script>
-
-
-
-    <span class="secondary-nav"><a href="https://supportportal.brightcove.com/s/login/?"><img src="https://support.brightcove.com/site-assets/images/site/support.png" alt="assistance"/> Contactez le support</a> <span style="vertical-align: top;margin-left:1em;margin-right:1em;">|</span> <a href="https://status.brightcove.com/"><img src="https://support.brightcove.com/site-assets/images/site/status.png" alt="état du système"/> État du système</a></span> <br/>
-    
-  </div>
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb arr-right">
-      
-      <li class="breadcrumb-item"><a href="/">Accueil</a></li>
-      
-      
-      
-      <li class="breadcrumb-item"><a href="/encoding-settings/assets/">Paramètres des médias</a></li>
-      
-      <li class="breadcrumb-item active" aria-current="page">Paramètres des vignettes</li>
-    </ol>
-  </nav>
-</header>
-<div class="container">
-    <div class="row">
-            <div class="col-sm-3 left-side-bar">
-        <select id="site_select" class="bcls-select" style="margin-right: 1rem;">
-          <option value="">Autres documents Brightcove</option>
-          
-            
-              <option value="https://support.brightcove.com">Accueil Documentation</option>
-            
-          
-            
-              <option value="https://audience.support.brightcove.com">Audience de Brightcove</option>
-            
-          
-            
-              <option value="https://beacon.support.brightcove.com">Balise Brightcove</option>
-            
-          
-            
-              <option value="https://campaign.support.brightcove.com">Campagne Brightcove</option>
-            
-          
-            
-              <option value="https://engage.support.brightcove.com">Brightcove Engagez</option>
-            
-          
-            
-              <option value="https://live.support.brightcove.com">Brightcove Live</option>
-            
-          
-            
-              <option value="https://gallery.support.brightcove.com">Brightcove Gallery</option>
-            
-          
-            
-              <option value="https://ssai.support.brightcove.com">Brightcove SSAI</option>
-            
-          
-            
-              <option value="https://social.support.brightcove.com">Brightcove Social</option>
-            
-          
-            
-              <option value="https://studio.support.brightcove.com">Video Cloud Studio</option>
-            
-          
-            
-              <option value="https://player.support.brightcove.com">Développement du joueur Brightcove</option>
-            
-          
-            
-              <option value="https://apis.support.brightcove.com">API de la plate-forme Video Cloud</option>
-            
-          
-            
-              <option value="https://sdks.support.brightcove.com">SDK pour périphériques Video Cloud</option>
-            
-          
-            
-              <option value="https://integrations.support.brightcove.com">Intégrations et connecteurs CMS</option>
-            
-          
-            
-              <option value="https://general.support.brightcove.com">Informations générales sur Video Cloud</option>
-            
-          
-            
-              <option value="https://zencoder.support.brightcove.com">Zencoder</option>
-            
-          
-        </select>
-
-        <nav class="sidenav" id="side_nav">
-          
-            
-            <h5><a href="/index.html">Accueil</a></h5>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/getting-started/index.html">Mise en route <strong>+</strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/getting-started/overview-zencoder.html">Vue d'ensemble</a></li>
-                  
-                
-                  
-                    <li><a href="/getting-started/quick-start-zencoder.html">Démarrage rapide</a></li>
-                  
-                
-                  
-                    <li><a href="/getting-started/getting-api-key.html">Obtention d'une clé API</a></li>
-                  
-                
-                  
-                    <li><a href="/getting-started/output-settings.html">Paramètres de sortie</a></li>
-                  
-                
-                  
-                    <li><a href="/getting-started/creating-multiple-outputs.html">Création de plusieurs sorties</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/general-information/index.html">Informations générales <strong>+</strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/general-information/faq-basics.html">Notions de base</a></li>
-                  
-                
-                  
-                    <li><a href="/general-information/faq-codecs-and-formats.html">Codecs Et Formats</a></li>
-                  
-                
-                  
-                    <li><a href="/general-information/faq-encoding.html">Encodage</a></li>
-                  
-                
-                  
-                    <li><a href="/general-information/faq-file-transfers.html">Transferts de fichiers</a></li>
-                  
-                
-                  
-                    <li><a href="/general-information/faq-zencoder-pricing.html">Tarification Zencoder</a></li>
-                  
-                
-                  
-                    <li><a href="/general-information/faq-rate-limiting.html">Limitation de vitesse</a></li>
-                  
-                
-                  
-                    <li><a href="/general-information/supported-video-and-audio-formats-codecs-and-containers.html">Formats audio et vidéo pris en charge</a></li>
-                  
-                
-                  
-                    <li><a href="/general-information/overview-context-aware-encoding.html">Vue d'ensemble : Encodage conscient du contexte</a></li>
-                  
-                
-                  
-                    <li><a href="/general-information/getting-notifications-when-videos-are-finished.html">Obtenir des notifications lorsque les vidéos sont terminées</a></li>
-                  
-                
-                  
-                    <li><a href="/general-information/how-zencoder-saves-your-files-when-uploads-fail.html">Comment Zencoder enregistre les fichiers lorsque les téléchargements échouent</a></li>
-                  
-                
-                  
-                    <li><a href="/general-information/using-zencoder-s3.html">Utilisation de Zencoder avec S3</a></li>
-                  
-                
-                  
-                    <li><a href="/general-information/using-zencoder-azure.html">Utilisation de Zencoder avec Azure</a></li>
-                  
-                
-                  
-                    <li><a href="/general-information/using-zencoder-google-cloud-platform.html">Utilisation de Zencoder avec Google Cloud Storage</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/references/index.html">Références <strong>+</strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/references/reference.html">Référence de l'API</a></li>
-                  
-                
-                  
-                    <li><a href="/references/known-issues.html">Problèmes connus</a></li>
-                  
-                
-                  
-                    <li><a href="/references/release-notes.html">Mise à jour produit</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/encoding-settings/index.html">Paramètres d'encodage <strong>+</strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li class="submenu-header">
-                      <a href="/encoding-settings/general/index.html">Paramètres généraux <strong>+</strong></a>
-                      <ul class="sidenav-subsubmenu" style="display:none;">
-                        
-                        <li><a href="/encoding-settings/general/encoding-settings-job.html">Paramètres de la tâche</a></li>
-                        
-                        <li><a href="/encoding-settings/general/encoding-settings-general-output-settings.html">Paramètres généraux de sortie</a></li>
-                        
-                        <li><a href="/encoding-settings/general/cae-settings.html">Paramètres CAE</a></li>
-                        
-                        <li><a href="/encoding-settings/general/encoding-settings-conditional-outputs.html">Paramètres des sorties conditionnelles</a></li>
-                        
-                        <li><a href="/encoding-settings/general/encoding-settings-notifications.html">Paramètres des notifications</a></li>
-                        
-                      </ul>
-                    </li>
-                  
-                
-                  
-                    <li class="submenu-header">
-                      <a href="/encoding-settings/general-audio-video/index.html">Paramètres audio/vidéo <strong>+</strong></a>
-                      <ul class="sidenav-subsubmenu" style="display:none;">
-                        
-                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-audio.html">Paramètres audio</a></li>
-                        
-                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-audio-processing.html">Paramètres de traitement audio</a></li>
-                        
-                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-video.html">Paramètres vidéo</a></li>
-                        
-                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-video-processing.html">Paramètres de traitement vidéo</a></li>
-                        
-                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-broadcast.html">Paramètres de diffusion</a></li>
-                        
-                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-frame-rate.html">Paramètres de fréquence d'images</a></li>
-                        
-                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-rate-control.html">Paramètres de contrôle de la vitesse</a></li>
-                        
-                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-resolution.html">Paramètres de résolution</a></li>
-                        
-                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-segmented-streaming.html">Paramètres de streaming segmenté</a></li>
-                        
-                        <li><a href="/encoding-settings/general-audio-video/encoding-settings-transmuxing.html">Paramètres de transmuxage</a></li>
-                        
-                      </ul>
-                    </li>
-                  
-                
-                  
-                    <li class="submenu-header">
-                      <a href="/encoding-settings/formats-codecs/index.html">Formats et paramètres de codec <strong>+</strong></a>
-                      <ul class="sidenav-subsubmenu" style="display:none;">
-                        
-                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-format-and-codecs.html">Paramètres de format et de codecs</a></li>
-                        
-                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-aac.html">Paramètres AAC</a></li>
-                        
-                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-flv.html">Paramètres FLV</a></li>
-                        
-                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-hdr10.html">Paramètres HDR</a></li>
-                        
-                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-h264.html">Paramètres H.264</a></li>
-                        
-                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-mp4.html">Paramètres MP4</a></li>
-                        
-                        <li><a href="/encoding-settings/formats-codecs/encoding-settings-vp6.html">Paramètres VP6</a></li>
-                        
-                      </ul>
-                    </li>
-                  
-                
-                  
-                    <li class="submenu-header">
-                      <a href="/encoding-settings/assets/index.html">Paramètres des ressources multimédias <strong>+</strong></a>
-                      <ul class="sidenav-subsubmenu" style="display:none;">
-                        
-                        <li><a href="/encoding-settings/assets/encoding-settings-captions.html">Paramètres des légendes</a></li>
-                        
-                        <li><a href="/encoding-settings/assets/encoding-settings-clips.html">Paramètres des clips</a></li>
-                        
-                        <li><a href="/encoding-settings/assets/encoding-settings-thumbnails.html">Paramètres des vignettes</a></li>
-                        
-                        <li><a href="/encoding-settings/assets/encoding-settings-watermarks.html">Paramètres des filigranes</a></li>
-                        
-                      </ul>
-                    </li>
-                  
-                
-                  
-                    <li class="submenu-header">
-                      <a href="/encoding-settings/content-protection/index.html">Paramètres de protection du contenu <strong>+</strong></a>
-                      <ul class="sidenav-subsubmenu" style="display:none;">
-                        
-                        <li><a href="/encoding-settings/content-protection/encoding-settings-encryption.html">Paramètres de chiffrement</a></li>
-                        
-                        <li><a href="/encoding-settings/content-protection/encoding-settings-decryption.html">Paramètres de déchiffrement</a></li>
-                        
-                        <li><a href="/encoding-settings/content-protection/encoding-settings-drm.html">Paramètres DRM</a></li>
-                        
-                      </ul>
-                    </li>
-                  
-                
-                  
-                    <li class="submenu-header">
-                      <a href="/encoding-settings/sources-destinations/index.html">Sources/Paramètres de destination <strong>+</strong></a>
-                      <ul class="sidenav-subsubmenu" style="display:none;">
-                        
-                        <li><a href="/encoding-settings/sources-destinations/encoding-settings-s3-settings.html">Paramètres S3</a></li>
-                        
-                        <li><a href="/encoding-settings/sources-destinations/encoding-settings-aspera.html">Paramètres Aspera</a></li>
-                        
-                      </ul>
-                    </li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/encoding-guides/index.html">Guides d'encodage <strong>+</strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/encoding-guides/advanced-audio-mapping-guide.html">Guide de cartographie audio</a></li>
-                  
-                
-                  
-                    <li><a href="/encoding-guides/as11-mxf.html">AS-11-MXF Guide</a></li>
-                  
-                
-                  
-                    <li><a href="/encoding-guides/avc-intra-guide.html">Guide AVC-Intra</a></li>
-                  
-                
-                  
-                    <li><a href="/encoding-guides/cae-guide.html">Guide de la CAE</a></li>
-                  
-                
-                  
-                    <li><a href="/encoding-guides/creating-mp4-and-hls-outputs-together.html">Guide de transmuxage</a></li>
-                  
-                
-                  
-                    <li><a href="/encoding-guides/dash-streaming-and-playlists.html">DASH Streaming et listes de lecture</a></li>
-                  
-                
-                  
-                    <li><a href="/encoding-guides/h264-advanced-guide.html">Guide avancé H.264</a></li>
-                  
-                
-                  
-                    <li><a href="/encoding-guides/hdr10-video-output.html">Formats vidéo HDR pris en charge</a></li>
-                  
-                
-                  
-                    <li><a href="/encoding-guides/hevch265-guide.html">Guide HEVC/H.265</a></li>
-                  
-                
-                  
-                    <li><a href="/encoding-guides/highwinds-smil.html">Guide SMIL Vents</a></li>
-                  
-                
-                  
-                    <li><a href="/encoding-guides/html5-encoding.html">Encodage HTML5</a></li>
-                  
-                
-                  
-                    <li><a href="/encoding-guides/http-live-segmented-streaming-and-playlists.html">Diffusion HLS et listes de lecture</a></li>
-                  
-                
-                  
-                    <li><a href="/encoding-guides/http-live-streaming-using-fragmented-mp4.html">HLS utilisant MP4 fragmenté</a></li>
-                  
-                
-                  
-                    <li><a href="/encoding-guides/iosmobile-encoding.html">Guide de codage iOS/Mobile</a></li>
-                  
-                
-                  
-                    <li><a href="/encoding-guides/microsoft-smooth-streaming.html">Streaming fluide Microsoft</a></li>
-                  
-                
-                  
-                    <li><a href="/encoding-guides/using-quality-based-encoding-modes-streaming-video.html">Modes de codage basé sur la qualité pour le streaming</a></li>
-                  
-                
-                  
-                    <li><a href="/encoding-guides/vp6-advanced-guide.html">Guide avancé VP6</a></li>
-                  
-                
-                  
-                    <li><a href="/encoding-guides/vp9-guide.html">Guide VP9</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/error-troubleshooting/index.html">Erreurs/Dépannage <strong>+</strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/error-troubleshooting/problems.html">Problèmes courants</a></li>
-                  
-                
-                  
-                    <li><a href="/error-troubleshooting/region-outages.html">Les pannes de région</a></li>
-                  
-                
-                  
-                    <li><a href="/error-troubleshooting/when-should-i-retry-failed-jobs.html">Quand recommencer les travaux ayant échoué</a></li>
-                  
-                
-                  
-                    <li class="submenu-header">
-                      <a href="/error-troubleshooting/error-codes/index.html">Codes d'erreur <strong>+</strong></a>
-                      <ul class="sidenav-subsubmenu" style="display:none;">
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-akamainetstoragefilesizeerror.html">AkamainetStorageFileSizeError</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-checksummismatcherror.html">CheckSummisMatcherror</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-dimensiontoosmallerror.html">DimensionToosMallerror</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-downloadaccessdeniederror.html">TéléchargeAccessDeniedError</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-downloadfailureerror.html">TéléchargeFailureError</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-downloadtimeouterror.html">TéléchargeTimeOutError</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-filenotfounderror.html">FileNotFounderErreur</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-inaccuratedurationerror.html">FichierPermanentLyMovedError</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-inaccuratedurationerror.html">Erreur inexactitureDurationErreur</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-incompatiblewithdynamicprofileserror.html">Erreur incompatibleWithDynamicProfilesError</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-inputfilenotfound.html">InputFileNotFound</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-invalidaccesskeyiderror.html">InvalidAccessKeyIdError</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-invalidaudiosettingserror.html">InvalidAudioSettingsError</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-invalidcodeccombinationerror.html">InvalidCodecCombinationError</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-invaliddownloadedfiletypeerror.html">InvalidDownloadedFileTYPEError</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-invalidencryptionsettingserror.html">InvalidenCryptionSettingSerror</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-invalidfilepatherror.html">InvalidFilePatherror</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-invalidformatcodecerror.html">InvalidFormatCodecError</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-invalidframerateerror.html">InvalidFramerateError</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-invalidusernameorpassworderror.html">InvalidUsernameOrPasswordError</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-invalidvideobitrateerror.html">InvalidVideobiTrateError</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-invalidvideosettingserror.html">InvalidVideoSettingsError</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-nomediaerror.html">NomediaError</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-quicktimereferenceerror.html">QuickTimeReferenceError</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-remoteserverproblemerror.html">RemoteServerProbleError</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-rtmpauthfailederror.html">RTMPAuthFailedError</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-rtmpmaxstreamsxidreached.html">RTMPMaxStreamsXidReigné</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-rtmpstreamnamealreadyinuse.html">RTMPStreamNamealReadyInuse</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-s3bucketnotfounderror.html">S3BucketNotFoundError</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-segmentingerror.html">SegmentError</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-skippedsourceerror.html">Erreur SkippedSourceErreur</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-thumbnailerror.html">Erreur miniature</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-transcodingerror.html">TranscodingError</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-transferinvalidgranteegroupurlerror.html">Transfer። InvalidGranteeGroupurlError</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-transferinvalidgranteeiderror.html">Transfer። InvalidGranteeIdError</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-truncatedfileerror.html">TruncatedFileError</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-unabletocreatedynamicprofileserror.html">Erreur UnableTocreateDynamicProfilesError</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-unexpecteddownloadproblemerror.html">InattenduDownloadProbleError</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-unexpectedffmpegresult.html">InattenduFFMPegResult</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-unexpectedmplayerresult.html">ResultMPlayerResult inattendu</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-unexpectedprogenresult.html">Résultat ProgenResult inattendu</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-unexpectedresulterror.html">InattenduResultErreur</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-unexpecteduploadproblemerror.html">InattenteDuploadprobleErreur</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-unexpectedx264result.html">Résultat inattenduX264Result</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-unreadablefileerror.html">Erreur UnreadableFileError</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-unsupportedcodecerror.html">UnsupportedCodecError</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-unsupportedencodingerror.html">UnsupportedEncodingError</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-unsupportedencryptionerror.html">UnsupportedenCryptionError</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-unsupportedtranscodecombinationerror.html">UnsupportedTranscodeCombinationError</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-uploadaccessdeniederror.html">UploadAccessDeniedError</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-uploadfailureerror.html">UploadFailureError</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-uploadservernotfounderror.html">UploadServerNotFoundError</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-uploadtimeouterror.html">UploadTimeOutError</a></li>
-                        
-                        <li><a href="/error-troubleshooting/error-codes/error-workertimeouterror.html">WorkerTimeOutErreur</a></li>
-                        
-                      </ul>
-                    </li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/integration/index.html">Intégration <strong>+</strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    <li><a href="/integration/faq-integration-libraries.html">bibliothèques d'intégration</a></li>
-                  
-                
-                  
-                    <li><a href="/integration/100-integration-reliability.html">Fiabilité d'intégration 100 %</a></li>
-                  
-                
-                  
-                    <li><a href="/integration/test-jobs-and-integration-mode.html">Test des travaux et mode d'intégration</a></li>
-                  
-                
-                  
-                    <li><a href="/integration/using-read-only-api-keys.html">Utilisation des clés API en lecture seule</a></li>
-                  
-                
-              </ul>
-            
-          
-            
-              <h5 class="submenu-header"><a href="/support/index.html">Support <strong>+</strong></a></h5>
-              <ul class="sidenav-submenu" style="display:none;">
-                
-                  
-                    
-                  
-                
-                  
-                    <li><a href="/support/viewing-brightcove-system-status-page.html">Affichage de la page État du système Brightcove</a></li>
-                  
-                
-                  
-                    <li><a href="/support/contact-sales.html">Contacter les ventes</a></li>
-                  
-                
-                  
-                    <li><a href="/support/opening-case-with-brightcove-support.html">Ouverture d'un dossier de support</a></li>
-                  
-                
-              </ul>
-            
-          
-      </nav>
-    </div>
-    <div class="col-lg-7" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;">
-  <!-- bootstrap layout -->
-
-<p id="bc_veggie_burger_wrapper" style="display: none;"><img id="bc_veggie_burger" src="/assets/images/feather/menu.svg" alt="Menu de navigation"/></p>
-
-<!-- search bar -->
-<div id="nav-search-box" style="margin-top: 1rem;"></div>
-<!-- in-page navigation for narrow screens -->
-<details class="centered-inpage-nav" id="centered_inpage_nav">
-  <summary><h6 class="toc">Contenu de la page</h6></summary>
-  <nav id="centered_toc"></nav>
-  <ul id="centered_in_page_toc" class="list-none"></ul>
-</details>
-<!-- open in new tab/window -->
-<a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="ouvrir dans un nouvel onglet" style="margin-top:4em;width: 1.5em;"/></a> <strong class="bcls-article">
-  <h1>Paramètres des vignettes</h1>
-  <summary>Cette rubrique contient des détails sur les paramètres d'encodage liés aux miniatures vidéo.</summary>
+---
+title: Description des paramètres des vignettes : Cette rubrique contient des détails sur les paramètres d'encodage liés aux vignettes vidéo.
+parent: Media Settings 
+grandparent: Encoding Settings
+---
+ <strong class="bcls-article"> <h1>{{ page.title }}</h1>
+  <summary>{{ page.description }}</summary>
 
   <section class="bcls-section">
-    <h2 id="thumbnails">imagettes</h2>
-    <code>vignettes: tableau ou hachage</code>
+    <h2 id="thumbnails">miniatures</h2>
+    <code translate="no">Miniatures : tableau ou hachage</code>
 
-    <p><strong>Versions de l'API:</strong> V1, V2</p>
+    <p><strong>Versions de l'API :</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">les sorties</a></p>
+    <p><strong>Parent :</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">sorties</a></p>
 
-    <p><strong>Types de travaux compatibles:</strong> Tous</p>
+    <p><strong>Types de tâches compatibles :</strong> Tous</p>
 
-    <p><strong>Exemple:</strong></p>
+    <p><strong>Exemple :</strong></p>
 
     <ul>
       <li>"vignettes": [{}]</li>
@@ -664,7 +26,7 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
     <p>Pour chaque sortie, vous pouvez demander une ou plusieurs vignettes.</p>
 
-    <p>Chaque sortie peut avoir ses propres ensembles de vignettes avec des <a href="#size">Taille</a> , <a href="#base-url">base_url</a> , et <a href="#access-control">contrôle d'accès</a> ensemble.</p>
+    <p>Chaque sortie peut avoir ses propres jeux de miniatures avec une <a href="#size">taille unique</a>, <a href="#base-url">base_url</a> et <a href="#access-control">access_control</a>. </p>
 
     <p>Plusieurs ensembles de vignettes peuvent être créés pour une seule sortie en passant plusieurs hachages de vignettes dans un tableau. Si les options de vignette sont passées dans un tableau, un <a href="#label">étiquette</a> doit être défini pour l'ensemble.</p>
 
@@ -672,139 +34,91 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
 
     <p>Les miniatures sont limitées à 100 par jeu. Si plus de vignettes seraient générées compte tenu des options demandées, un avertissement sera ajouté à la sortie et la création de vignettes s'arrêtera lorsque la limite sera atteinte.</p>
 
-    <p><strong>Remarque</strong> : Il n'y a pas de travail de vignettes uniquement. Spécifier une sortie avec seulement des vignettes <em>créera également</em> un mp4 pleine longueur facturable avec nos paramètres de transcodage par défaut et téléchargez-le dans un stockage temporaire.</p>
+    <p><strong>Remarque</strong>: Il n'y a pas de travail de vignettes uniquement. Spécification d'une sortie avec uniquement des vignettes <em>créera également</em> un mp4 pleine longueur facturable avec nos paramètres de transcodage par défaut et téléchargez-le dans un stockage temporaire.</p>
 
     <pre class="line-numbers">
-{<code class="language-json notranslate">
-  "input": "s3://zencodertesting/test.mov",
-  "outputs": [
-    {
-      "thumbnails": [
-        {
-          "label": "premier",
-          "number": 10
-        },
-        {
-          "label": "second",
-          "interval_in_frames": 5 000
-        }
-      ]
-    }
-  ]
-</code>}</pre>
+<code class="language-json notranslate">{ "input": "s3://zencodertesting/test.mov", "outputs": [ { "thumbnails": [ { "label": "first", "number": 10 }, { "label": "second", "interval_in_frames": 5000 }]}]}</code></pre>
 
-    <p><strong>Voir également:</strong> <a href="#label">étiquette</a></p>
+    <p><strong>Voir aussi :</strong> <a href="#label">label</a></p>
   </section>
   <section class="bcls-section">
     <h2 id="label">étiquette</h2>
-    <code>label: String</code>
+    <code translate="no">Étiquette : String</code>
 
-    <p><strong>Versions de l'API:</strong> V1, V2</p>
+    <p><strong>Versions de l'API :</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">les sorties</a> / <a href="#thumbnails">vignettes</a></p>
+    <p><strong>Parent :</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">sorties</a>/ <a href="#thumbnails">miniatures</a></p>
 
-    <p><strong>Types de travaux compatibles:</strong> Tous</p>
+    <p><strong>Types de tâches compatibles :</strong> Tous</p>
 
-    <p><strong>Exemple:</strong> affiche</p>
+    <p><strong>Exemple :</strong> affiche</p>
 
     <p><strong>Description :</strong></p>
 
     <p>Un nom pour l'ensemble de vignettes. Obligatoire lors de la demande d'ensembles de vignettes dans un tableau.</p>
 
     <pre class="line-numbers">
-{<code class="language-json notranslate">
-  "input": "s3://zencodertesting/test.mov",
-  "outputs": [
-    {
-      "thumbnails": [
-        {
-          "label": "poster"
-        },
-        {
-          "label": "clips"
-        }
-      ]
-    }
-  ]
-</code>}</pre>
+<code class="language-json notranslate">{ "input": "s3://zencodertesting/test.mov", "outputs": [ { "thumbnails": [ { "label": "poster" }, { "label": "clips" }]}]}</code></pre>
   </section>
   <section class="bcls-section">
     <h2 id="format">format</h2>
-    <code>format: Chaîne</code>
+    <code translate="no">Format : String</code>
 
-    <p><strong>Versions de l'API:</strong> V1, V2</p>
+    <p><strong>Versions de l'API :</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">les sorties</a> / <a href="#thumbnails">vignettes</a></p>
+    <p><strong>Parent :</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">sorties</a>/ <a href="#thumbnails">miniatures</a></p>
 
-    <p><strong>Défaut:</strong> png</p>
+    <p><strong>Par défaut :</strong> png</p>
 
-    <p><strong>Valeurs valides:</strong> png ou jpg</p>
+    <p><strong>Valeurs valides :</strong> png ou jpg</p>
 
-    <p><strong>Types de travaux compatibles:</strong> Tous</p>
+    <p><strong>Types de tâches compatibles :</strong> Tous</p>
 
-    <p><strong>Exemple:</strong> jpg</p>
+    <p><strong>Exemple :</strong> jpg</p>
 
     <p><strong>Description :</strong></p>
 
     <p>Format de l'image miniature.</p>
 
     <pre class="line-numbers">
-{<code class="language-json notranslate">
-  "input": "s3://zencodertesting/test.mov",
-  "outputs": [
-    {
-      "thumbnails": {
-        "format": "jpg"
-      }
-    }
-  ]
-</code>}</pre>
+<code class="language-json notranslate">{ "input": "s3://zencodertesting/test.mov", "outputs": [ { "thumbnails": { "format": "jpg" }}]}</code></pre>
   </section>
   <section class="bcls-section">
     <h2 id="number">nombre</h2>
-    <code>number: Entier</code>
+    <code translate="no">Numéro : entier</code>
 
-    <p><strong>Versions de l'API:</strong> V1, V2</p>
+    <p><strong>Versions de l'API :</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">les sorties</a> / <a href="#thumbnails">vignettes</a></p>
+    <p><strong>Parent :</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">sorties</a>/ <a href="#thumbnails">miniatures</a></p>
 
-    <p><strong>Valeurs valides:</strong> Un entier positif</p>
+    <p><strong>Valeurs valides :</strong> Un entier positif</p>
 
-    <p><strong>Types de travaux compatibles:</strong> Tous</p>
+    <p><strong>Types de tâches compatibles :</strong> Tous</p>
 
-    <p><strong>Exemple:</strong> 3</p>
+    <p><strong>Exemple :</strong> 3</p>
 
     <p><strong>Description :</strong></p>
 
     <p>Un certain nombre de vignettes à capturer. Zencoder récupérera des miniatures régulièrement espacées sur toute la durée du fichier. Donc, si vous demandez 1 vignette, ce sera vers le milieu du fichier. La spécification de 3 miniatures sur une vidéo de 8 minutes se traduira par des miniatures à environ 2, 4 et 6 minutes.</p>
 
     <pre class="line-numbers">
-{<code class="language-json notranslate">
-  "input": "s3://zencodertesting/test.mov",
-  "outputs": [
-    {
-      "thumbnails": {
-        "number": 3
-      }
-    }
-  ]
-</code>}</pre>
+<code class="language-json notranslate">{ "input": "s3://zencodertesting/test.mov", "outputs": [ { "thumbnails": { "number": 3 }}]}</code></pre>
   </section>
   <section class="bcls-section">
     <h2 id="start_at_first_frame">start_at_first_frame</h2>
-    <code>start_at_first_frame: Booléen</code>
+    <code translate="no">Start_AT_First_Frame:Booléen</code>
 
-    <p><strong>Versions de l'API:</strong> V1, V2</p>
+    <p><strong>Versions de l'API :</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">les sorties</a> / <a href="#thumbnails">vignettes</a></p>
+    <p><strong>Parent :</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">sorties</a>/ <a href="#thumbnails">miniatures</a></p>
 
-    <p><strong>Défaut:</strong> faux</p>
+    <p><strong>Valeur par défaut :</strong> false</p>
 
-    <p><strong>Valeurs valides:</strong> vrai ou faux</p>
+    <p><strong>Valeurs valides :</strong> vrai ou faux</p>
 
-    <p><strong>Types de travaux compatibles:</strong> Tous</p>
+    <p><strong>Types de tâches compatibles :</strong> Tous</p>
 
-    <p><strong>Exemple:</strong> vrai</p>
+    <p><strong>Exemple :</strong> vrai</p>
 
     <p><strong>Description :</strong></p>
 
@@ -813,193 +127,136 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Par exemple, lorsque vous utilisez si votre vidéo dure 5 secondes et que vous demandez 5 miniatures à l'aide de <a href="#number">nombre</a> option, cela créera des miniatures à 0s, 1s, 2s, 3s et 4s. Normalement, il saisirait les vignettes à 0,83 s, 1,66 s, 2,49 s, 3,32 s et 4,15 s.</p>
 
     <pre class="line-numbers">
-{<code class="language-json notranslate">
-  "input": "s3://zencodertesting/test.mov",
-  "outputs": [
-    {
-      "thumbnails": {
-        "number": 5,
-        "start_at_first_frame": vrai
-      }
-    }
-  ]
-</code>}</pre>
+<code class="language-json notranslate">{ "input": "s3://zencodertesting/test.mov", "outputs": [ { "thumbnails": { "number": 5, "start_at_first_frame": true }}]}</code></pre>
   </section>
   <section class="bcls-section">
     <h2 id="interval">intervalle</h2>
-    <code>intervalle: Float</code>
+    <code translate="no">Intervalle : flotteur</code>
 
-    <p><strong>Versions de l'API:</strong> V1, V2</p>
+    <p><strong>Versions de l'API :</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">les sorties</a> / <a href="#thumbnails">vignettes</a></p>
+    <p><strong>Parent :</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">sorties</a>/ <a href="#thumbnails">miniatures</a></p>
 
-    <p><strong>Types de travaux compatibles:</strong> Tous</p>
+    <p><strong>Types de tâches compatibles :</strong> Tous</p>
 
-    <p><strong>Exemple:</strong> 60</p>
+    <p><strong>Exemple :</strong> 60</p>
 
     <p><strong>Description :</strong></p>
 
     <p>Prenez des vignettes à un intervalle pair, en secondes. Zencoder renverra une vignette toutes les N secondes du fichier. Donc, si vous choisissez un intervalle de 60 et que votre fichier d'entrée dure 12 minutes, vous obtiendrez 12 miniatures, chacune à la minute.</p>
 
     <pre class="line-numbers">
-{<code class="language-json notranslate">
-  "input": "s3://zencodertesting/test.mov",
-  "outputs": [
-    {
-      "thumbnails": {
-        "intervalle": 60
-      }
-    }
-  ]
-</code>}</pre>
+<code class="language-json notranslate">{ "input": "s3://zencodertesting/test.mov", "outputs": [ { "thumbnails": { "interval": 60 }}]}</code></pre>
 
-    <p><strong>Voir également:</strong> <a href="#interval-in-frames">interval_in_frames</a></p>
+    <p><strong>Voir aussi :</strong> <a href="#interval-in-frames">interval_in_frames</a></p>
   </section>
   <section class="bcls-section">
     <h2 id="interval_in_frames">interval_in_frames</h2>
-    <code>interval_in_frames: Float</code>
+    <code translate="no">INTERVAL_IN_FRAMES : Float</code>
 
-    <p><strong>Versions de l'API:</strong> V1, V2</p>
+    <p><strong>Versions de l'API :</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">les sorties</a> / <a href="#thumbnails">vignettes</a></p>
+    <p><strong>Parent :</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">sorties</a>/ <a href="#thumbnails">miniatures</a></p>
 
-    <p><strong>Types de travaux compatibles:</strong> Tous</p>
+    <p><strong>Types de tâches compatibles :</strong> Tous</p>
 
-    <p><strong>Exemple:</strong> 120</p>
+    <p><strong>Exemple :</strong> 120</p>
 
     <p><strong>Description :</strong></p>
 
     <p>Prenez des vignettes à un intervalle pair, en images. Zencoder renverra une vignette pour toutes les N images du fichier. Donc, si vous choisissez un intervalle de 120 et que votre fichier d'entrée est de 29,97 images par seconde, vous obtiendrez des miniatures toutes les 4 secondes environ.</p>
 
     <pre class="line-numbers">
-{<code class="language-json notranslate">
-  "input": "s3://zencodertesting/test.mov",
-  "outputs": [
-    {
-      "thumbnails": {
-        "interval_in_frames": 120
-      }
-    }
-  ]
-</code>}</pre>
+<code class="language-json notranslate">{ "input": "s3://zencodertesting/test.mov", "outputs": [ { "thumbnails": { "interval_in_frames": 120 }}]}</code></pre>
 
-    <p><strong>Voir également:</strong> <a href="#interval">intervalle</a></p>
+    <p><strong>Voir aussi :</strong> <a href="#interval">intervalle</a></p>
   </section>
   <section class="bcls-section">
     <h2 id="times">temps</h2>
-    <code>fois: Array</code>
+    <code translate="no">Fois:Array</code>
 
-    <p><strong>Versions de l'API:</strong> V1, V2</p>
+    <p><strong>Versions de l'API :</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">les sorties</a> / <a href="#thumbnails">vignettes</a></p>
+    <p><strong>Parent :</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">sorties</a>/ <a href="#thumbnails">miniatures</a></p>
 
-    <p><strong>Types de travaux compatibles:</strong> Tous</p>
+    <p><strong>Types de tâches compatibles :</strong> Tous</p>
 
-    <p><strong>Exemple:</strong> [0, 30, 60, 90]</p>
+    <p><strong>Exemple :</strong> [0, 30, 60, 90]</p>
 
     <p><strong>Description :</strong></p>
 
     <p>Tableau de temps, en secondes, auquel saisir une vignette. Les décimales sont valides. Ainsi, régler les heures sur [12,5, 25] saisirait deux vignettes, une à 12,5 secondes et une à 25 secondes. Cette valeur doit être un tableau de nombres non négatifs.</p>
 
     <pre class="line-numbers">
-{<code class="language-json notranslate">
-  "input": "s3://zencodertesting/test.mov",
-  "outputs": [
-    {
-      "thumbnails": {
-        "fois": [0, 30, 60, 90]
-      }
-    }
-  ]
-</code>}</pre>
+<code class="language-json notranslate">{ "input": "s3://zencodertesting/test.mov", "outputs": [ { "thumbnails": { "times": [0, 30, 60, 90] }}]}</code></pre>
   </section>
   <section class="bcls-section">
     <h2 id="aspect_mode">aspect_mode</h2>
-    <code>aspect_mode: Chaîne</code>
+    <code translate="no">Aspect_Mode:String</code>
 
-    <p><strong>Versions de l'API:</strong> V1, V2</p>
+    <p><strong>Versions de l'API :</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">les sorties</a> / <a href="#thumbnails">vignettes</a></p>
+    <p><strong>Parent :</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">sorties</a>/ <a href="#thumbnails">miniatures</a></p>
 
-    <p><strong>Default:</strong> preserve</p>
+    <p><strong>Par défaut :</strong> Conserver</p>
 
-    <p><strong>Valid Values:</strong> preserve, stretch, crop, or pad</p>
+    <p><strong>Valeurs valides :</strong> conserver, étirer, rogner ou tampon</p>
 
-    <p><strong>Types de travaux compatibles:</strong> Tous</p>
+    <p><strong>Types de tâches compatibles :</strong> Tous</p>
 
-    <p><strong>Exemple:</strong> tampon</p>
+    <p><strong>Exemple :</strong> pad</p>
 
     <p><strong>Description :</strong></p>
 
     <p>Le mode d'aspect à utiliser lors de la création de vignettes.</p>
 
     <ul>
-      <li><strong>preserve</strong>: Par défaut, Zencoder conservera le rapport hauteur / largeur du fichier vidéo de sortie, donc si vous soumettez un contenu grand écran et demandez une résolution standard, le fichier miniature conservera le rapport hauteur / largeur grand écran et s'adaptera à la taille demandée.</li>
-      <li><strong>stretch</strong>: Lorsque le mode d'aspect est «étirer», la vignette correspondra exactement à la largeur et à la hauteur demandées, même si elle déforme l'image.</li>
-      <li><strong>crop</strong>: Cette option indique à Zencoder de "zoomer" sur la vignette pour qu'elle corresponde à la taille demandée, en recadrant les pixels de haut / bas ou de gauche / droite.</li>
+      <li><strong>préserver</strong>: Par défaut, Zencoder conservera le rapport hauteur / largeur du fichier vidéo de sortie, donc si vous soumettez un contenu grand écran et demandez une résolution standard, le fichier miniature conservera le rapport hauteur / largeur grand écran et s'adaptera à la taille demandée.</li>
+      <li><strong>étirement</strong>: Lorsque le mode aspect est « étiré », la vignette correspond exactement à la largeur et à la hauteur demandées, même si elle déforme l'image.</li>
+      <li><strong>culture</strong>: Cette option indique à Zencoder de "zoomer" sur la vignette pour qu'elle corresponde à la taille demandée, en recadrant les pixels de haut / bas ou de gauche / droite.</li>
       <li><strong>pad</strong>: L'option pad indique à Zencoder de boîte aux lettres la vignette correspondant à la taille d'image demandée. Utilisez cette option pour conserver le rapport hauteur / largeur de la vidéo de sortie, mais obtenez toujours des miniatures de la même taille.</li>
     </ul>
     <p><strong>Note :</strong> En raison des contraintes des algorithmes de mise à l'échelle vidéo, les dimensions des vignettes seront un nombre pair. Si vous demandez des miniatures de 100x75, par exemple, vous obtiendrez des miniatures de 100x74.</p>
 
     <pre class="line-numbers">
-{<code class="language-json notranslate">
-  "input": "s3://zencodertesting/test.mov",
-  "outputs": [
-    {
-      "thumbnails": {
-        "aspect_mode": "pad",
-        "width": 200,
-        "height": 200
-      }
-    }
-  ]
-</code>}</pre>
+<code class="language-json notranslate">{ "input": "s3://zencodertesting/test.mov", "outputs": [ { "thumbnails": { "aspect_mode": "pad", "width": 200, "height": 200 }}]}</code></pre>
 
     <p><strong>Voir également:</strong> <a href="#size">Taille</a> , <a href="#width">largeur</a> , et <a href="#height">la taille</a></p>
   </section>
   <section class="bcls-section">
-    <h2 id="size">size</h2>
-    <code>taille: String</code>
+    <h2 id="size">taille</h2>
+    <code translate="no">Taille : String</code>
 
-    <p><strong>Versions de l'API:</strong> V1, V2</p>
+    <p><strong>Versions de l'API :</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">les sorties</a> / <a href="#thumbnails">vignettes</a></p>
+    <p><strong>Parent :</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">sorties</a>/ <a href="#thumbnails">miniatures</a></p>
 
-    <p><strong>Types de travaux compatibles:</strong> Tous</p>
+    <p><strong>Types de tâches compatibles :</strong> Tous</p>
 
-    <p><strong>Exemple:</strong> 400 x 300</p>
+    <p><strong>Exemple :</strong> 400 x 300</p>
 
     <p><strong>Description :</strong></p>
 
     <p>Une résolution cible pour les vignettes, comme "160 × 120". Si aucune taille n'est fournie, les miniatures auront la même taille que la vidéo de sortie. Par défaut, nous conserverons le rapport hauteur / largeur, donc si le rapport hauteur / largeur de ce paramètre de taille ne correspond pas au rapport hauteur / largeur du film, le fichier résultant peut ne pas correspondre exactement à cette taille. Si Stretch est défini sur true pour le fichier de sortie correspondant, cette vignette sera également étirée pour remplir la résolution.</p>
 
     <pre class="line-numbers">
-{<code class="language-json notranslate">
-  "input": "s3://zencodertesting/test.mov",
-  "outputs": [
-    {
-      "thumbnails": {
-        "Taille": "400 x 300"
-      }
-    }
-  ]
-</code>}</pre>
+<code class="language-json notranslate">{ "input": "s3://zencodertesting/test.mov", "outputs": [ { "thumbnails": { "size": "400x300" }}]}</code></pre>
 
     <p><strong>Voir également:</strong> <a href="#width">largeur</a> , <a href="#height">la taille</a> , et <a href="#aspect-mode">aspect_mode</a></p>
   </section>
   <section class="bcls-section">
     <h2 id="width">largeur</h2>
-    <code>width: Entier</code>
+    <code translate="no">Largeur : entier</code>
 
-    <p><strong>Versions de l'API:</strong> V1, V2</p>
+    <p><strong>Versions de l'API :</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">les sorties</a> / <a href="#thumbnails">vignettes</a></p>
+    <p><strong>Parent :</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">sorties</a>/ <a href="#thumbnails">miniatures</a></p>
 
-    <p><strong>Valeurs valides:</strong> Un entier positif</p>
+    <p><strong>Valeurs valides :</strong> Un entier positif</p>
 
-    <p><strong>Types de travaux compatibles:</strong> Tous</p>
+    <p><strong>Types de tâches compatibles :</strong> Tous</p>
 
-    <p><strong>Exemple:</strong> 640</p>
+    <p><strong>Exemple :</strong> 640</p>
 
     <p><strong>Description :</strong></p>
 
@@ -1008,32 +265,23 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Notez que <a href="#size">Taille</a> a priorité sur soit <a href="#width">largeur</a> et <a href="#height">la taille</a>.</p>
 
     <pre class="line-numbers">
-{<code class="language-json notranslate">
-  "input": "s3://zencodertesting/test.mov",
-  "outputs": [
-    {
-      "thumbnails": {
-        "width": 640
-      }
-    }
-  ]
-</code>}</pre>
+<code class="language-json notranslate">{ "input": "s3://zencodertesting/test.mov", "outputs": [ { "thumbnails": { "width": 640 }}]}</code></pre>
 
     <p><strong>Voir également:</strong> <a href="#size">Taille</a> , <a href="#height">la taille</a> , et <a href="#aspect-mode">aspect_mode</a></p>
   </section>
   <section class="bcls-section">
-    <h2 id="height">hauteur</h2>
-    <code>hauteur: Entier</code>
+    <h2 id="height">la taille</h2>
+    <code translate="no">Hauteur : entier</code>
 
-    <p><strong>Versions de l'API:</strong> V1, V2</p>
+    <p><strong>Versions de l'API :</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">les sorties</a> / <a href="#thumbnails">vignettes</a></p>
+    <p><strong>Parent :</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">sorties</a>/ <a href="#thumbnails">miniatures</a></p>
 
-    <p><strong>Valeurs valides:</strong> Un entier positif</p>
+    <p><strong>Valeurs valides :</strong> Un entier positif</p>
 
-    <p><strong>Types de travaux compatibles:</strong> Tous</p>
+    <p><strong>Types de tâches compatibles :</strong> Tous</p>
 
-    <p><strong>Exemple:</strong> 480</p>
+    <p><strong>Exemple :</strong> 480</p>
 
     <p><strong>Description :</strong></p>
 
@@ -1042,75 +290,57 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Notez que <a href="#size">Taille</a> a priorité sur soit <a href="#width">largeur</a> et <a href="#height">la taille</a>.</p>
 
     <pre class="line-numbers">
-{<code class="language-json notranslate">
-  "input": "s3://zencodertesting/test.mov",
-  "outputs": [
-    {
-      "thumbnails": {
-        "height": 480
-      }
-    }
-  ]
-</code>}</pre>
+<code class="language-json notranslate">{ "input": "s3://zencodertesting/test.mov", "outputs": [ { "thumbnails": { "height": 480 }}]}</code></pre>
 
     <p><strong>Voir également:</strong> <a href="#size">Taille</a> , <a href="#width">largeur</a> , et <a href="#aspect-mode">aspect_mode</a></p>
   </section>
   <section class="bcls-section">
     <h2 id="base_url">base_url</h2>
-    <code>base_url: Chaîne</code>
+    <code translate="no">Base_URL : chaîne</code>
 
-    <p><strong>Versions de l'API:</strong> V1, V2</p>
+    <p><strong>Versions de l'API :</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">les sorties</a> / <a href="#thumbnails">vignettes</a></p>
+    <p><strong>Parent :</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">sorties</a>/ <a href="#thumbnails">miniatures</a></p>
 
-    <p><strong>Valeurs valides:</strong> Une URL S3, Cloud Files, GCS, FTP, FTPS ou SFTP valide, moins le nom de fichier. Format: s3: // [nom du compartiment] / [chemin] ou ftp: // [utilisateur]: [mot de passe] @ [ftp.url] / [chemin]</p>
+    <p><strong>Valeurs valides :</strong> Une URL S3, Cloud Files, GCS, FTP, FTPS ou SFTP valide, moins le nom de fichier. Format : s3 ://[nom du compartiment]/[chemin] ou ftp://[user]:[password]@[ftp.url]/[path]</p>
 
-    <p><strong>Types de travaux compatibles:</strong> Tous</p>
+    <p><strong>Types de tâches compatibles :</strong> Tous</p>
 
-    <p><strong>Exemple:</strong></p>
+    <p><strong>Exemple :</strong></p>
 
     <ul>
-      <li>s3: // mon-compartiment-de-sortie /</li>
-      <li>cf: // nom d'utilisateur: api_key @ container / path /</li>
-      <li>ftp: // utilisateur: password@ftp.example.com/path/to</li>
+      <li>s3 : //mon-seau de sortie/</li>
+      <li>cf : //nom d'utilisateur:api_key @container /path/</li>
+      <li>ftp://user:password@ftp.example.com/path/to</li>
     </ul>
     <p><strong>Description :</strong></p>
 
-    <p>Une destination de sortie pour les miniatures. Si base_url est vide, nous stockerons les vignettes dans notre compartiment Zencoder S3. Les fichiers stockés dans le compartiment Zencoder S3 seront disponibles après 24 heures. Notez que les noms de fichiers ne sont pas uniques entre les sorties (par exemple frame_0000.png), donc la destination doit être un répertoire ou un préfixe de clé unique pour éviter d'écraser les fichiers.</p>
+    <p>Une destination de sortie pour les miniatures. Si base_url est vide, nous stockerons les miniatures dans notre compartiment Zencoder S3. Les fichiers stockés dans le compartiment Zencoder S3 seront disponibles après 24 heures. Notez que les noms de fichiers ne sont pas uniques entre les sorties (par exemple frame_0000.png), donc la destination doit être un répertoire ou un préfixe de clé unique pour éviter d'écraser les fichiers.</p>
 
-    <p><strong>Utilisateurs FTP</strong> : nous essayons d'écrire à partir de la racine de votre serveur, utilisez donc un chemin absolu pour votre URL afin de nous assurer que nous pouvons écrire sur votre serveur avec succès.</p>
+    <p><strong>Utilisateurs FTP</strong> : nous essayons d'écrire à partir de la racine de votre serveur. Par conséquent, utilisez un chemin absolu pour votre URL pour vous assurer que nous pouvons écrire sur votre serveur avec succès.</p>
 
-    <p><strong>Remarques sur les informations d'identification:</strong></p>
+    <p><strong>Remarques sur les informations d'identification :</strong></p>
 
-    <p>Si vous fournissez des informations d'identification via base_url, elles seront présentes dans les URL apparaissant dans les requêtes adressées au <a href="/references/reference.html#api-Jobs-Get_Job_Details">détails du poste</a> , <a href="/references/reference.html#api-Outputs-Get_Output_Details">détails de sortie</a> , etc. Si <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#credentials">identifiants</a> sont stockés avec Zencoder, ils n'apparaîtront pas dans les URL de ces réponses.</p>
+    <p>Si vous fournissez des informations d'identification via base_url, elles seront présentes dans les URL apparaissant dans les requêtes relatives aux détails de la <a href="/references/reference.html#api-Jobs-Get_Job_Details">tâche</a>, aux détails de <a href="/references/reference.html#api-Outputs-Get_Output_Details">sortie</a>, etc. Si <a href="/encoding-settings/general/encoding-settings-general-output-settings.html#credentials">identifiants</a> sont stockés avec Zencoder, ils n'apparaîtront pas dans les URL de ces réponses.</p>
 
     <pre class="line-numbers">
-{<code class="language-json notranslate">
-  "input": "s3://zencodertesting/test.mov",
-  "outputs": [
-    {
-      "thumbnails": {
-        "base_url": "s3: // mon-compartiment-de-sortie /"
-      }
-    }
-  ]
-</code>}</pre>
+<code class="language-json notranslate">{ "input": "s3://zencodertesting/test.mov", "outputs": [ { "thumbnails": { "base_url": "s3://my-output-bucket/" }}]}</code></pre>
 
-    <p><strong>Voir également:</strong> <a href="#prefix">préfixe</a> et <a href="#filename">nom de fichier</a></p>
+    <p><strong>Voir aussi :</strong> <a href="#prefix">préfixe</a> et <a href="#filename">nom de fichier</a></p>
   </section>
   <section class="bcls-section">
     <h2 id="prefix">préfixe</h2>
-    <code>préfixe: String</code>
+    <code translate="no">Préfixe : String</code>
 
-    <p><strong>Versions de l'API:</strong> V1, V2</p>
+    <p><strong>Versions de l'API :</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">les sorties</a> / <a href="#thumbnails">vignettes</a></p>
+    <p><strong>Parent :</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">sorties</a>/ <a href="#thumbnails">miniatures</a></p>
 
-    <p><strong>Défaut:</strong> Cadre</p>
+    <p><strong>Par défaut :</strong> frame</p>
 
-    <p><strong>Types de travaux compatibles:</strong> Tous</p>
+    <p><strong>Types de tâches compatibles :</strong> Tous</p>
 
-    <p><strong>Exemple:</strong></p>
+    <p><strong>Exemple :</strong></p>
 
     <ul>
       <li>les pouces</li>
@@ -1121,315 +351,214 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Les fichiers miniatures seront exportés avec des noms de fichiers séquentiels. Cependant, vous pouvez spécifier un préfixe personnalisé pour les fichiers de vignettes. Si aucun préfixe n'est spécifié, nous utiliserons frame. Par exemple, si vous utilisez le préfixe 'custom', les fichiers exportés seront nommés custom_0000.png, custom_0001.png, etc. Sans un préfixe personnalisé, ils seraient nommés frame_0000.png, frame_0001.png, etc.</p>
 
     <pre class="line-numbers">
-{<code class="language-json notranslate">
-  "input": "s3://zencodertesting/test.mov",
-  "outputs": [
-    {
-      "thumbnails": {
-        "prefix": "thumbs"
-      }
-    }
-  ]
-</code>}</pre>
+<code class="language-json notranslate">{ "input": "s3://zencodertesting/test.mov", "outputs": [ { "thumbnails": { "prefix": "thumbs" }}]}</code></pre>
 
-    <p><strong>Voir également:</strong> <a href="#base-url">base_url</a> et <a href="#filename">nom de fichier</a></p>
+    <p><strong>Voir aussi :</strong> <a href="#base-url">base_url</a> et <a href="#filename">filename</a></p>
   </section>
   <section class="bcls-section">
-    <h2 id="filename">filename</h2>
-    <code>nom de fichier: String</code>
+    <h2 id="filename">nom de fichier</h2>
+    <code translate="no">Nom du fichier : String</code>
 
-    <p><strong>Versions de l'API:</strong> V1, V2</p>
+    <p><strong>Versions de l'API :</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">les sorties</a> / <a href="#thumbnails">vignettes</a></p>
+    <p><strong>Parent :</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">sorties</a>/ <a href="#thumbnails">miniatures</a></p>
 
-    <p><strong>Défaut:</strong> Cadre</p>
+    <p><strong>Par défaut :</strong> frame</p>
 
-    <p><strong>Types de travaux compatibles:</strong> Tous</p>
+    <p><strong>Types de tâches compatibles :</strong> Tous</p>
 
-    <p><strong>Exemple:</strong></p>
-
+    <p><strong>Exemple :</strong></p>
+{% raw %}
     <ul>
-      <li>miniature _ {{number}}</li>
-      <li>{{number}} _ {{width}} x {{height}} - miniature</li>
+      <li>la vignette_{{number}}</li>
+      <li>{{number}}_{{width}}X{{height}}-la vignette</li>
     </ul>
     <p><strong>Description :</strong></p>
-
-    <p>Les fichiers miniatures peuvent recevoir un nom de fichier basé sur plusieurs attributs. Les attributs incluent le nombre, le nombre rempli, la largeur, la hauteur et la taille. Il n'est pas nécessaire d'ajouter une extension de fichier, car elle sera ajoutée par Zencoder en fonction de l'option «format».</p>
+{% endraw %}
+    <p>Les fichiers miniatures peuvent recevoir un nom de fichier basé sur plusieurs attributs. Les attributs incluent le nombre, le nombre rempli, la largeur, la hauteur et la taille. Il n'est pas nécessaire d'ajouter une extension de fichier, car Zencoder l'ajoutera en fonction de l'option « format ».</p>
 
     <p>number ou padded-number doit être utilisé, tous les autres sont facultatifs. padded-number utilise 4 points (0000, 0001, etc.).</p>
 
     <p>la hauteur, la largeur et la taille seront basées sur la taille réelle de la vignette générée.</p>
 
-    <p>Exemple: <em>_x-miniature</em></p>
+    <p>Exemple : <em>{{number}}_{{width}}X{{height}}-la vignette</em></p>
 
     <p>Les caractères valides incluent les lettres, les chiffres, les tirets, les traits de soulignement et les valeurs interpolées.</p>
 
-    <aside class="bcls-aside bcls-aside--warning">Notez que les caractères spéciaux ne sont pas pris en charge dans les noms de fichiers, même s'ils sont encodés en URL.</aside>
-    <p><strong>Remarque</strong> : Si vous spécifiez un nom de fichier, tout <a href="#prefix">préfixe</a> sera ignoré.</p>
+    <aside class="bcls-aside bcls-aside--warning">Notez que les caractères spéciaux ne sont pas pris en charge dans les noms de fichiers, même s'ils sont codés en URL.</aside>
+    <p><strong>Remarque</strong>: Si vous spécifiez un nom de fichier, tout <a href="#prefix">préfixe</a> sera ignoré.</p>
 
     <pre class="line-numbers">
-{<code class="language-json notranslate">
-  "input": "s3://zencodertesting/test.mov",
-  "outputs": [
-    {
-      "thumbnails": {
-        "filename": "_x-miniature"
-      }
-    }
-  ]
-</code>}</pre>
+<code class="language-json notranslate">{ « input » : « s3 : //zencodertesting/test.mov », « sorties » : [{« miniatures » : {« nom de fichier » : "{{number}}_{{width}}x{{height}}-miniature »}}]}</code></pre>
 
-    <p><strong>Voir également:</strong> <a href="#base-url">base_url</a> et <a href="#prefix">préfixe</a></p>
+    <p><strong>Voir aussi :</strong> <a href="#base-url">base_url</a> et <a href="#prefix">préfixe</a></p>
   </section>
   <section class="bcls-section">
-    <h2 id="public">publique</h2>
-    <code>public: Booléen</code>
+    <h2 id="public">public</h2>
+    <code translate="no">Public : Booléen</code>
 
-    <p><strong>Versions de l'API:</strong> V1, V2</p>
+    <p><strong>Versions de l'API :</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">les sorties</a> / <a href="#thumbnails">vignettes</a></p>
+    <p><strong>Parent :</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">sorties</a>/ <a href="#thumbnails">miniatures</a></p>
 
-    <p><strong>Défaut:</strong> faux</p>
+    <p><strong>Valeur par défaut :</strong> false</p>
 
-    <p><strong>Valeurs valides:</strong> vrai ou faux</p>
+    <p><strong>Valeurs valides :</strong> vrai ou faux</p>
 
-    <p><strong>Types de travaux compatibles:</strong> Tous</p>
+    <p><strong>Types de tâches compatibles :</strong> Tous</p>
 
     <p><strong>Description :</strong></p>
 
     <p>Le même que <a href="/encoding-settings/sources-destinations/encoding-settings-s3-settings.html#public">Publique</a> pour les fichiers de sortie. Voir <a href="/encoding-settings/sources-destinations/encoding-settings-s3-settings.html#public">Publique</a> pour une documentation complète de cette option.</p>
 
     <pre class="line-numbers">
-{<code class="language-json notranslate">
-  "input": "s3://zencodertesting/test.mov",
-  "outputs": [
-    {
-      "thumbnails": {
-        "number": dix,
-        "public": vrai
-      }
-    }
-  ]
-</code>}</pre>
+<code class="language-json notranslate">{ "input": "s3://zencodertesting/test.mov", "outputs": [ { "thumbnails": { "number": 10, "public": true }}]}</code></pre>
 
-    <p><strong>Voir également:</strong> <a href="#access-control">contrôle d'accès</a></p>
+    <p><strong>Voir aussi :</strong> <a href="#access-control">access_control</a></p>
   </section>
   <section class="bcls-section">
     <h2 id="access_control">access_control</h2>
-    <code>access_control: tableau</code>
+    <code translate="no">ACCESS_Control:Array</code>
 
-    <p><strong>Versions de l'API:</strong> V1, V2</p>
+    <p><strong>Versions de l'API :</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">les sorties</a> / <a href="#thumbnails">vignettes</a></p>
+    <p><strong>Parent :</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">sorties</a>/ <a href="#thumbnails">miniatures</a></p>
 
-    <p><strong>Valeurs valides:</strong> Un tableau de hachages contenant deux paramètres: <a href="#grantee">bénéficiaire</a> et <a href="#permission">autorisation</a>.</p>
+    <p><strong>Valeurs valides :</strong> Un tableau de hachages contenant deux paramètres : le <a href="#grantee">bénéficiaire</a> et <a href="#permission">l'autorisation</a>.</p>
 
-    <p><strong>Types de travaux compatibles:</strong> Tous</p>
+    <p><strong>Types de tâches compatibles :</strong> Tous</p>
 
     <p><strong>Description :</strong></p>
 
     <p>Le même que <a href="/encoding-settings/sources-destinations/encoding-settings-s3-settings.html#access-control">contrôle d'accès</a> pour les fichiers de sortie. Voir <a href="/encoding-settings/sources-destinations/encoding-settings-s3-settings.html#access-control">contrôle d'accès</a> pour une documentation complète de cette option.</p>
 
     <pre class="line-numbers">
-{<code class="language-json notranslate">
-  "input": "s3://zencodertesting/test.mov",
-  "outputs": [
-    {
-      "thumbnails": {
-        "access_control": [
-          {
-            "permission": "LIS",
-            "bénéficiaire": "quelqu'un@exemple.com"
-          }
-        ]
-      }
-    }
-  ]
-</code>}</pre>
+<code class="language-json notranslate">{ "input": "s3://zencodertesting/test.mov", "outputs": [ { "thumbnails": { "access_control": [ { "permission": "READ", "grantee": "someone@example.com" }]}}]}</code></pre>
 
     <p><strong>Voir également:</strong> <a href="#public">Publique</a> , <a href="#grantee">bénéficiaire</a> , et <a href="#permission">autorisation</a></p>
   </section>
   <section class="bcls-section">
     <h2 id="grantee">bénéficiaire</h2>
-    <code>bénéficiaire: String</code>
+    <code translate="no">Grantee : String</code>
 
-    <p><strong>Versions de l'API:</strong> V1, V2</p>
+    <p><strong>Versions de l'API :</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">les sorties</a> / <a href="#thumbnails">vignettes</a> / <a href="#access-control">contrôle d'accès</a></p>
+    <p><strong>Parent :</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">sorties</a>/ <a href="#thumbnails">miniatures</a>/ <a href="#access-control">access_control</a></p>
 
-    <p><strong>Valeurs valides:</strong> Un bénéficiaire S3 valide (e-mail, ID ou URI)</p>
+    <p><strong>Valeurs valides :</strong> Un bénéficiaire S3 valide (e-mail, ID ou URI)</p>
 
-    <p><strong>Types de travaux compatibles:</strong> Tous</p>
+    <p><strong>Types de tâches compatibles :</strong> Tous</p>
 
     <p><strong>Description :</strong></p>
 
     <p>Le même que <a href="/encoding-settings/sources-destinations/encoding-settings-s3-settings.html#grantee">bénéficiaire</a> pour les fichiers de sortie. Voir <a href="/encoding-settings/sources-destinations/encoding-settings-s3-settings.html#grantee">bénéficiaire</a> pour une documentation complète de cette option.</p>
 
     <pre class="line-numbers">
-{<code class="language-json notranslate">
-  "input": "s3://zencodertesting/test.mov",
-  "outputs": [
-    {
-      "thumbnails": {
-        "access_control": [
-          {
-            "permission": "FULL_CONTROL",
-            "grantee": "cdc7931a9574b1055d5b76112021d0e9"
-          }
-        ]
-      }
-    }
-  ]
-</code>}</pre>
+<code class="language-json notranslate">{ "input": "s3://zencodertesting/test.mov", "outputs": [ { "thumbnails": { "access_control": [ { "permission": "FULL_CONTROL", "grantee": "cdc7931a9574b1055d5b76112021d0e9" }]}}]}</code></pre>
 
-    <p><strong>Voir également:</strong> <a href="#access-control">contrôle d'accès</a> et <a href="#permission">autorisation</a></p>
+    <p><strong>Voir aussi :</strong> <a href="#access-control">access_control</a> et <a href="#permission">permission</a></p>
   </section>
   <section class="bcls-section">
     <h2 id="permission">autorisation</h2>
-    <code>permission: String</code>
+    <code translate="no">Autorise:chaîne</code>
 
-    <p><strong>Versions de l'API:</strong> V1, V2</p>
+    <p><strong>Versions de l'API :</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">les sorties</a> / <a href="#thumbnails">vignettes</a> / <a href="#access-control">contrôle d'accès</a></p>
+    <p><strong>Parent :</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">sorties</a>/ <a href="#thumbnails">miniatures</a>/ <a href="#access-control">access_control</a></p>
 
-    <p><strong>Valeurs valides:</strong> Une chaîne ou un tableau de chaînes contenant: READ, READ_ACP, WRITE_ACP ou FULL_CONTROL</p>
+    <p><strong>Valeurs valides :</strong> Une chaîne ou un tableau de chaînes contenant : READ, READ_ACP, WRITE_ACP ou FULL_CONTROL</p>
 
-    <p><strong>Types de travaux compatibles:</strong> Tous</p>
+    <p><strong>Types de tâches compatibles :</strong> Tous</p>
 
     <p><strong>Description :</strong></p>
 
     <p>Le même que <a href="/encoding-settings/sources-destinations/encoding-settings-s3-settings.html#permission">autorisation</a> pour les fichiers de sortie. Voir <a href="/encoding-settings/sources-destinations/encoding-settings-s3-settings.html#permission">autorisation</a> pour une documentation complète de cette option.</p>
 
     <pre class="line-numbers">
-{<code class="language-json notranslate">
-  "input": "s3://zencodertesting/test.mov",
-  "outputs": [
-    {
-      "thumbnails": {
-        "access_control": [
-          {
-            "permission": "FULL_CONTROL",
-            "grantee": "cdc7931a9574b1055d5b76112021d0e9"
-          }
-        ]
-      }
-    }
-  ]
-</code>}</pre>
+<code class="language-json notranslate">{ "input": "s3://zencodertesting/test.mov", "outputs": [ { "thumbnails": { "access_control": [ { "permission": "FULL_CONTROL", "grantee": "cdc7931a9574b1055d5b76112021d0e9" }]}}]}</code></pre>
 
-    <p><strong>Voir également:</strong> <a href="#access-control">contrôle d'accès</a> et <a href="#grantee">bénéficiaire</a></p>
+    <p><strong>Voir aussi :</strong> <a href="#access-control">access_control</a> and <a href="#grantee">grantee</a></p>
   </section>
   <section class="bcls-section">
     <h2 id="rss">rss</h2>
-    <code>rrs: booléen</code>
+    <code translate="no">RRS : booléen</code>
 
-    <p><strong>Versions de l'API:</strong> V1, V2</p>
+    <p><strong>Versions de l'API :</strong> V1, V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">les sorties</a> / <a href="#thumbnails">vignettes</a></p>
+    <p><strong>Parent :</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">sorties</a>/ <a href="#thumbnails">miniatures</a></p>
 
-    <p><strong>Défaut:</strong> faux</p>
+    <p><strong>Valeur par défaut :</strong> false</p>
 
-    <p><strong>Valeurs valides:</strong> vrai ou faux</p>
+    <p><strong>Valeurs valides :</strong> vrai ou faux</p>
 
-    <p><strong>Types de travaux compatibles:</strong> Tous</p>
+    <p><strong>Types de tâches compatibles :</strong> Tous</p>
 
     <p><strong>Description :</strong></p>
 
     <p>Le même que <a href="/encoding-settings/sources-destinations/encoding-settings-s3-settings.html#rrs">rrs</a> pour les fichiers de sortie. Voir <a href="/encoding-settings/sources-destinations/encoding-settings-s3-settings.html#rrs">rrs</a> pour une documentation complète de cette option.</p>
 
     <pre class="line-numbers">
-{<code class="language-json notranslate">
-  "input": "s3://zencodertesting/test.mov",
-  "outputs": [
-    {
-      "thumbnails": {
-        "rrs": vrai
-      }
-    }
-  ]
-</code>}</pre>
+<code class="language-json notranslate">{ "input": "s3://zencodertesting/test.mov", "outputs": [ { "thumbnails": { "rrs": true }}]}</code></pre>
   </section>
   <section class="bcls-section">
     <h2 id="headers">en-têtes</h2>
-    <code>en-têtes: Hash</code>
+    <code translate="no">En-têtes : Hash</code>
 
-    <p><strong>Versions de l'API:</strong> V1, V2</p>
+    <p><strong>Versions de l'API :</strong> V1, V2</p>
 
-    <p><strong>Parents:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">les sorties</a> OU <a href="#thumbnails">vignettes</a></p>
+    <p><strong>Parents :</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">sorties</a> ou <a href="#thumbnails">miniatures</a></p>
 
-    <p><strong>Types de travaux compatibles:</strong> Tous</p>
+    <p><strong>Types de tâches compatibles :</strong> Tous</p>
 
-    <p><strong>Exemple:</strong> {"Content-Type": "binary / octet-stream"}</p>
+    <p><strong>Exemple :</strong> { "Content-Type": "binary/octet-stream" }</p>
 
     <p><strong>Description :</strong></p>
 
     <p>En-têtes HTTP à envoyer avec vos vignettes lorsque nous les téléchargeons. Cette fonctionnalité est actuellement prise en charge lors de l'utilisation de S3 et Cloud Files.</p>
 
-    <p>Zencoder prend en charge la définition d'un sous-ensemble limité de ces en-têtes: Cache-Control, Content-Disposition, Content-Encoding, Content-Type, Expires, x-amz-acl, x-amz-storage-class, x-amz-server-side-encryption et x-amz-meta- * .</p>
+    <p>Zencoder prend en charge la définition d'un sous-ensemble limité de ces en-têtes : Contrôle du cache, Disposition du contenu, Encodage de contenu, Type de contenu, Expire, x-amz-acl, x-amz-storage-class, cryptage côté serveur x-amz-server-* et x-amz-meta-*.</p>
 
     <p>Les en-têtes seront ignorés lorsqu'un emplacement de sortie n'est pas spécifié.</p>
 
     <pre class="line-numbers">
-{<code class="language-json notranslate">
-  "input": "s3://zencodertesting/test.mov",
-  "outputs": [
-    {
-      "thumbnails": {
-        "headers": {
-          "Content-Type": "binaire / octet-stream",
-          "x-amz-acl": "public-read-write"
-        }
-      }
-    }
-  ]
-</code>}</pre>
+<code class="language-json notranslate">{ "input": "s3://zencodertesting/test.mov", "outputs": [ { "thumbnails": { "headers": { "Content-Type": "binary/octet-stream", "x-amz-acl": "public-read-write" }}}]}</code></pre>
   </section>
   <section class="bcls-section">
     <h2 id="credentials">informations d'identification</h2>
-    <code>informations d'identification: chaîne</code>
+    <code translate="no">Informations d'identification : chaîne</code>
 
-    <p><strong>Versions de l'API:</strong> V2</p>
+    <p><strong>Versions de l'API :</strong> V2</p>
 
-    <p><strong>Parent:</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">les sorties</a> / <a href="#thumbnails">vignettes</a></p>
+    <p><strong>Parent :</strong> <a href="/encoding-settings/general/encoding-settings-job.html#outputs">sorties</a>/ <a href="#thumbnails">miniatures</a></p>
 
-    <p><strong>Types de travaux compatibles:</strong> Tous</p>
+    <p><strong>Types de tâches compatibles :</strong> Tous</p>
 
-    <p><strong>Exemple:</strong> ftp_dev_server</p>
+    <p><strong>Exemple :</strong> ftp_dev_server</p>
 
     <p><strong>Description :</strong></p>
 
     <p>Référence le surnom des informations d'identification enregistrées à utiliser pour le transfert, qui sont gérées dans le <a href="https://app.zencoder.com/account/credentials">Section des informations d'identification du compte</a>.</p>
 
-    <p><strong>REMARQUE:</strong> Les informations d'identification pour les services de syndication concernent uniquement les vidéos de sortie.</p>
+    <p><strong>REMARQUE :</strong> Les informations d'identification pour les services de syndication concernent uniquement les vidéos de sortie.</p>
 
     <pre class="line-numbers">
-{<code class="language-json notranslate">
-  "input": "s3://zencodertesting/test.mov",
-  "outputs": [
-    {
-      "thumbnails": {
-        "base_url": "ftp://ftp.example.com/thumbnails/",
-        "credentials": "ftp_dev_server"
-      }
-    }
-  ]
-</code>}</pre>
+<code class="language-json notranslate">{ "input": "s3://zencodertesting/test.mov", "outputs": [ { "thumbnails": { "base_url": "ftp://ftp.example.com/thumbnails/", "credentials": "ftp_dev_server" }}]}</code></pre>
 
-    <p><strong>Voir également:</strong> <a href="#base-url">base_url</a></p>
+    <p><strong>Voir aussi :</strong> <a href="#base-url">base_url</a></p>
   </section>
   <section class="bcls-section">
     <h2 id="parallel_upload_limit">parallel_upload_limit</h2>
-    <code>parallel_upload_limit: Entier</code>
+    <code translate="no">Parallel_Upload_Limit:entier</code>
 
-    <p><strong>Versions de l'API:</strong> V1, V2</p>
+    <p><strong>Versions de l'API :</strong> V1, V2</p>
 
-    <p><strong>Défaut:</strong> 30 pour S3, 10 pour toutes les autres destinations.</p>
+    <p><strong>Par défaut :</strong> 30 pour S3, 10 pour toutes les autres destinations.</p>
 
-    <p><strong>Valeurs valides:</strong> Un entier entre 1 et 30</p>
+    <p><strong>Valeurs valides :</strong> Un entier entre 1 et 30</p>
 
-    <p><strong>Types de travaux compatibles:</strong> Tous</p>
+    <p><strong>Types de tâches compatibles :</strong> Tous</p>
 
-    <p><strong>Exemple:</strong> 5</p>
+    <p><strong>Exemple :</strong> 5</p>
 
     <p><strong>Description :</strong></p>
 
@@ -1438,144 +567,6 @@ function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;i
     <p>Cela peut accélérer les temps de transfert, en fonction de la bande passante de votre serveur distant. Sachez que plus de connexions peuvent alourdir la charge du serveur. Si vous rencontrez des problèmes avec les délais de téléchargement ou si vous souhaitez empêcher Zencoder d'utiliser trop de bande passante lors du téléchargement de fichiers, définissez ce paramètre sur 1.</p>
 
     <pre class="line-numbers">
-{<code class="language-json notranslate">
-  "input": "s3://zencodertesting/test.mov",
-  "outputs": [
-    {
-      "thumbnails": {
-        "base_url": "ftp://ftp.example.com/thumbnails/",
-        "parallel_upload_limit": 5
-      }
-    }
-  ]
-</code>}</pre>
+<code class="language-json notranslate">{ "input": "s3://zencodertesting/test.mov", "outputs": [ { "thumbnails": { "base_url": "ftp://ftp.example.com/thumbnails/", "parallel_upload_limit": 5 }}]}</code></pre>
   </section>
 </strong>
-<!-- complete bootstrap layout -->
-    </div>
-    <div class="col-sm-2 right-side-bar">
-      
-      <nav class="right-side-nav" id="right_side_nav">
-        <h6 class="toc">Contenu de la page</h6>
-        <ul id="in_page_nav" class="list-none"></ul>
-      </nav>
-      
-    </div>
-  </div>
-</div>
-
-<hr>
-<footer class="bcls-footer" role="contentinfo">  <div class="row">
-    <div class="region region-footer-top-center col-md-12">
-      <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
-
-        <h2>Assistance Brightcove</h2>
-
-        <ul class="menu">
-          <li>
-            <a href="https://status.brightcove.com">État du système</a>
-          </li>
-          <li>
-            <a href="https://supportportal.brightcove.com/s/login/?">Contacter le support</a>
-          </li>
-          <li>
-            <a href="https://support.brightcove.com/">Documentation</a>
-          </li>
-        </ul>
-
-      </nav>
-      <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
-
-        <h2>Formation</h2>
-
-        <ul class="menu">
-          <li>
-            <a href="https://studio.support.brightcove.com/training/online-training-courses.html">Cours en ligne</a>
-          </li>
-          <li>
-            <a href="https://studio.support.brightcove.com/training/register-training.html">S' inscrire à un cours</a>
-          </li>
-          <li>
-            <a href="https://university.brightcove.com/">Université de Brightcove</a>
-          </li>
-        </ul>
-
-      </nav>
-      <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
-
-        <h2>Brightcove</h2>
-
-        <ul class="menu">
-          <li>
-            <a href="https://www.brightcove.com">BrightCove.com</a>
-          </li>
-          <li>
-            <a href="https://supportportal.brightcove.com/s/login/?">Contactez-nous</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-  <div class="row">
-    <div class="region region-footer-bottom-center col-md-12">
-      <div class="bcls-copyright footer-menu">
-        <table>
-          <tr>
-            <td>
-              <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> Brightcove, Inc. Tous droits réservés.</div>
-            </td>
-            <td><a href="https://www.brightcove.com/en/legal/privacy">Confidentialité</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">Termes et conditions</a></td>
-            <td>
-              <div class="gf-links-cols footer-menu">
-                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
-                </div>
-              </div>
-            </td>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script>
-      
-  var searchBox = sajari.init({
-    mode: "search-box",
-    project: "1588255093746585379", // Set this to your project.
-    collection: "brightcove-documenation", // Set this to your collection.
-    instantPipeline: "autocomplete", // Pipeline used as you type
-    inputPlaceholder: "Search", // Input element placeholder
-    maxSuggestions: 5, // Maximum number of suggestions to show
-    attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
-  });
-  
-    searchBox("sub", "pipeline.search-sent", function (_, query) {
-      window.location = "/search.html?q=" + encodeURIComponent(query.q);
-    });
-  
-
-</script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/https-fix.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/setDate.js"></script>
-  
-  <script src="https://support.brightcove.com/site-assets/js/site/prism.js"></script>
-  
-  <script src="https://support.brightcove.com/site-assets/js/site/site.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/tabs.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/toc.js"></script>
-  <script src="/assets/js/sites_nav.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/bcls-utils.js"></script>
-  <script src="https://support.brightcove.com/site-assets/js/site/local-link-fix.js"></script>
-  <script src="/assets/js/feedback.js"></script>
-  
-  <script src="/assets/js/sajari-search-foot.js"></script>
-  
-  <!-- <script src="/assets/js/sajari-index.js"></script> -->
-  <!-- <script src="https://sdk.amazonaws.com/js/aws-sdk-2.677.0.min.js"></script> -->
-</body>
-
-</html>
